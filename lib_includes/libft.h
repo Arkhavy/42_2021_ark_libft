@@ -6,7 +6,7 @@
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:31:48 by ljohnson          #+#    #+#             */
-/*   Updated: 2021/12/08 08:27:15 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2021/12/10 08:52:12 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int		ft_isdigit(int c);
 int		ft_isprint(int c);
 
 int		ft_ischarset(char c, char *set);
+int		ft_isnotcharset(char c, char *set);
 
 /*/////////////////////////////////////////////////////////////////////////////
 		MEMORY MANAGEMENT FUNCTIONS

@@ -6,7 +6,7 @@
 #    By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 14:41:20 by ljohnson          #+#    #+#              #
-#    Updated: 2021/12/08 08:27:01 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2021/12/10 08:51:30 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ MAIN =
 #//////////////////////////////////////////////////////////////////////////////
 
 SRC_BOOL =	ft_isalnum.c		ft_isalpha.c		ft_isascii.c		ft_isdigit.c		ft_isprint.c	\
-			ft_ischarset.c
+			ft_ischarset.c		ft_isnotcharset.c
 
 SRC_LST =	ft_lstadd_back.c	ft_lstadd_front.c	ft_lstclear.c		ft_lstdelone.c		ft_lstiter.c	\
 			ft_lstlast.c		ft_lstmap.c			ft_lstnew.c			ft_lstsize.c
