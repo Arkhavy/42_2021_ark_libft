@@ -6,10 +6,11 @@
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 12:15:21 by ljohnson          #+#    #+#             */
-/*   Updated: 2021/12/03 12:47:14 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2021/12/13 08:50:29 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "../../lib_includes/libft.h"
 
 static int	count_str(const char *s, char c)
@@ -32,8 +33,8 @@ static int	count_str(const char *s, char c)
 
 static char	*ft_splitdup(const char *s, char c)
 {
-	char		*str;
-	size_t		a;
+	char	*str;
+	size_t	a;
 
 	a = 0;
 	while (s[a] && s[a] != c)
@@ -53,9 +54,9 @@ static char	*ft_splitdup(const char *s, char c)
 
 char	**ft_split(const char *s, char c)
 {
-	char		**str;
-	size_t		nb_str;
-	size_t		a;
+	char	**str;
+	size_t	nb_str;
+	size_t	a;
 
 	if (!s)
 		return (NULL);
