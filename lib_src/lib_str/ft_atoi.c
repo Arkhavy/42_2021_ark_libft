@@ -6,7 +6,7 @@
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:25:45 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/04 14:17:03 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/04 14:39:26 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,14 @@ int	ft_atoi(const char *str)
 			negative = -negative;
 		str++;
 	}
-	while ((*str >= '0' && *str <= '9'))
+	while (ft_isdigit(*str))
 	{
 		res = res * 10 + *str - '0';
 		str++;
 	}
-	if (res > INT_MAX && negative == -1)
+	if (res > LONG_MAX && negative == -1)
 		return (0);
-	else if (res > INT_MAX && negative == 1)
+	else if (res > LONG_MAX && negative == 1)
 		return (-1);
 	result = res * negative;
 	return (result);
