@@ -6,7 +6,7 @@
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:31:48 by ljohnson          #+#    #+#             */
-/*   Updated: 2021/12/10 10:50:19 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/04 14:52:29 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ size_t	ft_strlen(const char *str);
 char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strnjoin(const char *s1, const char *s2, ssize_t index);
 int		ft_int_strchr(const char *s, int c);
+long	ft_atol(const char *str);
 
 /*/////////////////////////////////////////////////////////////////////////////
 		PRINT FUNCTIONS

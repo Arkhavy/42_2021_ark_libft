@@ -6,7 +6,7 @@
 #    By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 14:41:20 by ljohnson          #+#    #+#              #
-#    Updated: 2021/12/10 08:51:30 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/01/04 14:53:28 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ SRC_STR =	ft_atoi.c			ft_int_strchr.c		ft_itoa.c			ft_split.c			ft_strchr.c		\
 			ft_strdup.c			ft_striteri.c		ft_strjoin.c		ft_strlcat.c		ft_strlcpy.c	\
 			ft_strlen.c			ft_strmapi.c		ft_strncmp.c		ft_strnjoin.c		ft_strnstr.c	\
 			ft_strrchr.c		ft_strstr.c			ft_strtrim.c		ft_substr.c			ft_tolower.c	\
-			ft_toupper.c
+			ft_toupper.c		ft_atol.c
 
 SRCS =	${addprefix lib_src/lib_bool/,${SRC_BOOL}}	${addprefix lib_src/lib_lst/,${SRC_LST}}		\
 		${addprefix lib_src/lib_mem/,${SRC_MEM}}	${addprefix lib_src/lib_print/,${SRC_PRINT}}	\
