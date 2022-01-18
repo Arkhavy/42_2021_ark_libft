@@ -6,7 +6,7 @@
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:31:48 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/18 13:26:58 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/18 16:12:41 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,40 @@ size_t	ft_word_count(const char *str);
 size_t	count_char(long nb);
 
 /*/////////////////////////////////////////////////////////////////////////////
+		MATHS FUNCTIONS
+*//////////////////////////////////////////////////////////////////////////////
+
+int		ft_approx_sqrt(int nb);
+int		ft_sqrt(int nb);
+
+/*/////////////////////////////////////////////////////////////////////////////
+		MLX FUNCTIONS AND STRUCTS
+*//////////////////////////////////////////////////////////////////////////////
+
+typedef struct s_mlx_img
+{
+	void	*ptr;
+	char	*path;
+	int		width;
+	int		height;
+}	t_mlxi;
+
+typedef struct s_mlx_program
+{
+	void	*mlx;
+	void	*win;
+	t_mlxi	*img;
+	int		x;
+	int		y;
+	int		win_width;
+	int		win_height;
+}	t_mlxp;
+
+void	ft_mlx_square(t_mlxp program, int coeff, int x_start, int hex_color);
+void	ft_mlx_square_board(t_mlxp program, int coeff, int hex_color);
+void	ft_mlx_point_board(t_mlxp program, int coeff, int hex_color);
+
+/*/////////////////////////////////////////////////////////////////////////////
 		CONVERSION FUNCTIONS
 *//////////////////////////////////////////////////////////////////////////////
 
@@ -138,7 +172,7 @@ void	ft_putptr_fd(unsigned long long nbr, int fd);
 void	ft_putnbr_base_fd(unsigned int nbr, char *base);
 
 /*/////////////////////////////////////////////////////////////////////////////
-		LINKED LISTS
+		LINKED LISTS FUNCTIONS AND STRUCT
 *//////////////////////////////////////////////////////////////////////////////
 
 typedef struct s_list
