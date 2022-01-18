@@ -6,7 +6,7 @@
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 17:31:42 by ljohnson          #+#    #+#             */
-/*   Updated: 2021/12/03 12:45:53 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/18 08:18:01 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,9 @@ static char	*gnl_reader(char **stock, char *line, int fd, ssize_t *index)
 		*index = read(fd, buffer[fd], BUFFER_SIZE);
 		if (*index < 0)
 			return (NULL);
-			buffer[fd][*index] = '\0';
-			temp = buffer[fd];
-			*stock = gnl_build_stock(*stock, temp, *index);
+		buffer[fd][*index] = '\0';
+		temp = buffer[fd];
+		*stock = gnl_build_stock(*stock, temp, *index);
 	}
 	else
 	{

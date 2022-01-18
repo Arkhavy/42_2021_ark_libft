@@ -6,7 +6,7 @@
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:31:48 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/18 13:02:45 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/18 13:26:58 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,21 +81,26 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s1, const char *set);
-char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
-void	ft_striteri(char *s, void (*f)(unsigned int, char*));
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-size_t	ft_strlen(const char *str);
 
 char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strnjoin(const char *s1, const char *s2, ssize_t index);
 int		ft_int_strchr(const char *s, int c);
-int		ft_word_count(char *str);
 char	*ft_unsplit(char **split, char c);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strcat(char *dst, const char *src);
 char	*ft_strncat(char *dst, const char *src, size_t len);
+
+/*/////////////////////////////////////////////////////////////////////////////
+		COUNT FUNCTIONS
+*//////////////////////////////////////////////////////////////////////////////
+
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlen(const char *str);
+
+size_t	ft_word_count(const char *str);
+size_t	count_char(long nb);
 
 /*/////////////////////////////////////////////////////////////////////////////
 		CONVERSION FUNCTIONS
@@ -105,6 +110,8 @@ int		ft_atoi(const char *str);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_itoa(int n);
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 long	ft_atol(const char *str);
 int		ft_big_atoi(const char *str);
