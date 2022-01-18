@@ -1,59 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_big_atoi.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 15:54:23 by ljohnson          #+#    #+#             */
-/*   Updated: 2021/12/03 12:47:12 by ljohnson         ###   ########lyon.fr   */
+/*   Created: 2022/01/18 13:08:35 by ljohnson          #+#    #+#             */
+/*   Updated: 2022/01/18 13:17:07 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../lib_includes/libft.h"
 
-static size_t	count_char(long nb)
+int	ft_big_atoi(const char *str)
 {
-	size_t	a;
+	long	result;
+	size_t	res;
+	int		negative;
+	int		a;
 
+	negative = 1;
+	res = 0;
 	a = 0;
-	if (nb <= 0)
+	while (str[a] && (ft_isspace(str[a]) || (str[a] >= 9 && str[a] <= 13)))
+		a++;
+	if (str[a] == '-' || str[a] == '+')
 	{
-		nb = nb * -1;
+		if (str[a] == '-')
+			negative = -negative;
 		a++;
 	}
-	while (nb > 0)
+	while (ft_isdigit(str[a]))
 	{
-		nb = nb / 10;
+		res = res * 10 + str[a] - '0';
 		a++;
 	}
-	return (a);
-}
-
-char	*ft_itoa(int n)
-{
-	char	*str;
-	long	nb;
-	size_t	a;
-
-	nb = n;
-	a = count_char(nb);
-	str = malloc(sizeof(char) * a + 1);
-	if (!str)
-		return (NULL);
-	str[a] = '\0';
-	if (nb == 0)
-		str[0] = '0';
-	if (nb < 0)
-	{
-		str[0] = '-';
-		nb = nb * -1;
-	}
-	while (nb > 0)
-	{
-		str[a - 1] = '0' + (nb % 10);
-		nb = nb / 10;
-		a--;
-	}
-	return (str);
+	result = res * negative;
+	return (result);
 }

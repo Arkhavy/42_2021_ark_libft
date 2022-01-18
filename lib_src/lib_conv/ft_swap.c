@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 13:03:08 by ljohnson          #+#    #+#             */
-/*   Updated: 2021/12/03 12:47:27 by ljohnson         ###   ########lyon.fr   */
+/*   Created: 2022/01/18 13:55:06 by ljohnson          #+#    #+#             */
+/*   Updated: 2022/01/18 14:59:49 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../lib_includes/libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	ft_swap(int *a, int *b)
 {
-	size_t	a;
-	size_t	length;
+	int	ret;
 
-	a = 0;
-	length = ft_strlen(src);
-	if (dstsize > 0)
-	{
-		while (a + 1 < dstsize && src[a])
-		{
-			dst[a] = src[a];
-			a++;
-		}
-		dst[a] = '\0';
-	}
-	return (length);
+	ret = *a;
+	*a = *b;
+	*b = ret;
 }

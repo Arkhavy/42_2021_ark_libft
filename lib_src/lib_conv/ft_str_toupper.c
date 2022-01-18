@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_str_toupper.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 13:22:06 by ljohnson          #+#    #+#             */
-/*   Updated: 2021/12/03 12:47:25 by ljohnson         ###   ########lyon.fr   */
+/*   Created: 2022/01/18 13:51:52 by ljohnson          #+#    #+#             */
+/*   Updated: 2022/01/18 13:54:41 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../lib_includes/libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+char	*ft_str_toupper(const char *str)
 {
-	size_t	a;
-	size_t	b;
+	char	*newstr;
+	int		a;
+	int		len;
 
-	a = ft_strlen(dst);
-	b = 0;
-	if (dstsize == 0)
-		return (ft_strlen(src));
-	if (dstsize <= a)
-		return (dstsize + ft_strlen(src));
-	while (dstsize && (--dstsize - a) && src[b])
+	a = 0;
+	len = ft_strlen(str);
+	newstr = malloc(sizeof(char) * len + 1);
+	if (!newstr)
+		return (NULL);
+	while (a < len)
 	{
-		dst[a + b] = src[b];
-		b++;
+		if (ft_islower(str[a]))
+			newstr[a] = ft_toupper(str[a]);
+		else
+			newstr[a] = str[a];
+		a++;
 	}
-	dst[a + b] = '\0';
-	return (ft_strlen(src) + a);
+	newstr[a] = '\0';
+	return (newstr);
 }
