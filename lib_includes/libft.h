@@ -6,7 +6,7 @@
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:31:48 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/04 14:52:29 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/18 13:02:45 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@
 # include <limits.h>
 # include <fcntl.h>
 # include <stdarg.h>
+# include <stddef.h>
+# include <sys/wait.h>
+# include <stdio.h>
+# include "ft_mlx_keys.h"
 
 /*/////////////////////////////////////////////////////////////////////////////
 		DEFINES
@@ -44,6 +48,10 @@ int		ft_isprint(int c);
 
 int		ft_ischarset(char c, char *set);
 int		ft_isnotcharset(char c, char *set);
+int		ft_isupper(int c);
+int		ft_islower(int c);
+int		ft_isspace(int c);
+int		ft_isprime(int nb);
 
 /*/////////////////////////////////////////////////////////////////////////////
 		MEMORY MANAGEMENT FUNCTIONS
@@ -58,16 +66,13 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 
 void	ft_free(char **str);
+void	ft_free_split(char **split);
 
 /*/////////////////////////////////////////////////////////////////////////////
-		STR MANAGEMENT FUNCTIONS
+		STR FUNCTIONS
 *//////////////////////////////////////////////////////////////////////////////
 
-int		ft_atoi(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-char	*ft_itoa(int n);
 char	**ft_split(const char *s, char c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s1);
@@ -85,7 +90,28 @@ size_t	ft_strlen(const char *str);
 char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strnjoin(const char *s1, const char *s2, ssize_t index);
 int		ft_int_strchr(const char *s, int c);
+int		ft_word_count(char *str);
+char	*ft_unsplit(char **split, char c);
+char	*ft_strcpy(char *dst, const char *src);
+char	*ft_strncpy(char *dst, const char *src, size_t len);
+char	*ft_strcat(char *dst, const char *src);
+char	*ft_strncat(char *dst, const char *src, size_t len);
+
+/*/////////////////////////////////////////////////////////////////////////////
+		CONVERSION FUNCTIONS
+*//////////////////////////////////////////////////////////////////////////////
+
+int		ft_atoi(const char *str);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+char	*ft_itoa(int n);
+
 long	ft_atol(const char *str);
+int		ft_big_atoi(const char *str);
+long	ft_big_atol(const char *str);
+void	ft_swap(int *a, int *b);
+char	*ft_str_toupper(const char *str);
+char	*ft_str_tolower(const char *str);
 
 /*/////////////////////////////////////////////////////////////////////////////
 		PRINT FUNCTIONS
@@ -98,9 +124,11 @@ void	ft_putnbr_fd(int n, int fd);
 
 int		ft_int_putchar(int c);
 int		ft_int_putstr(char *s);
-int		ft_int_putptr(unsigned long long nbr);
 int		ft_int_putnbr(int n);
+int		ft_int_putptr(unsigned long long nbr);
 int		ft_int_putnbr_base(unsigned int nbr, char *base);
+void	ft_putptr_fd(unsigned long long nbr, int fd);
+void	ft_putnbr_base_fd(unsigned int nbr, char *base);
 
 /*/////////////////////////////////////////////////////////////////////////////
 		LINKED LISTS
@@ -128,5 +156,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 char	*get_next_line(int fd);
 int		ft_printf(const char *format, ...);
+
+char	*ft_gnl_join(int fd);
+int		ft_heredoc(int fd);
 
 #endif

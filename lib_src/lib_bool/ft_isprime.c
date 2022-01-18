@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isprime.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 13:45:49 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/18 13:00:09 by ljohnson         ###   ########lyon.fr   */
+/*   Created: 2022/01/18 13:00:40 by ljohnson          #+#    #+#             */
+/*   Updated: 2022/01/18 13:03:33 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../lib_includes/libft.h"
 
-int	ft_isalpha(int c)
+int	ft_isprime(int nb)
 {
-	if (ft_islower(c) || ft_isupper(c))
-		return (1);
-	return (0);
+	int	a;
+
+	a = 2;
+	if (nb < a)
+		return (0);
+	while (a <= nb / a)
+	{
+		if (nb % a == 0)
+			return (0);
+		a++;
+	}
+	return (1);
 }
