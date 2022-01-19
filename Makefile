@@ -6,7 +6,7 @@
 #    By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 14:41:20 by ljohnson          #+#    #+#              #
-#    Updated: 2022/01/19 15:39:30 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/01/19 16:13:38 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ SRC_STR =	ft_int_strchr.c			ft_split.c				ft_strchr.c			ft_strdup.c			\
 			ft_strjoin.c			ft_strncmp.c			ft_strnjoin.c		ft_strnstr.c		\
 			ft_strrchr.c			ft_strstr.c				ft_strtrim.c		ft_substr.c			\
 			ft_strcpy.c				ft_strncpy.c			ft_unsplit.c		ft_strcat.c			\
-			ft_strncat.c
+			ft_strncat.c			ft_strfreejoin.c
 
 SRC_CONV =	ft_toupper.c			ft_tolower.c			ft_atoi.c			ft_atol.c			\
 			ft_itoa.c				ft_big_atoi.c			ft_big_atol.c		ft_swap.c			\
