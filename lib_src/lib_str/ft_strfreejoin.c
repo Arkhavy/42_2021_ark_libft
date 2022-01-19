@@ -6,7 +6,7 @@
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 16:10:39 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/19 16:12:46 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/19 16:44:19 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ char	*ft_strfreejoin(const char *s1, const char *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	tmp1 = s1;
-	tmp2 = s2;
+	tmp1 = (char *)s1;
+	tmp2 = (char *)s2;
 	str = ft_strjoin(s1, s2);
 	free (tmp1);
 	free (tmp2);

@@ -6,7 +6,7 @@
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:31:48 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/19 16:13:27 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/19 16:43:21 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,7 +126,7 @@ typedef struct s_mlx_program
 {
 	void	*mlx;
 	void	*win;
-	t_mlxi	*img;
+	t_mlxi	**img;
 	int		x;
 	int		y;
 	int		win_width;

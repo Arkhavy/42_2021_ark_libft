@@ -6,7 +6,7 @@
 #    By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 14:41:20 by ljohnson          #+#    #+#              #
-#    Updated: 2022/01/19 16:13:38 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/01/19 17:00:34 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@
 
 NAME = libft.a
 MAIN = 
+BINARY =
 
 #//////////////////////////////////////////////////////////////////////////////
 #		ALL FILES
@@ -94,17 +95,11 @@ RM = rm -rf
 # colors
 BLACK=\033[30m
 RED=\033[31m
-LIGHT_RED=\033[91m
 GREEN=\033[32m
-LIGHT_GREEN=\033[92m
 YELLOW=\033[33m
-LIGHT_YELLOW=\033[93m
 BLUE=\033[34m
-LIGHT_BLUE=\033[94m
 PURPLE=\033[35m
-LIGHT_PURPLE=\033[95m
 CYAN=\033[36m
-LIGHT_CYAN=\033[96m
 WHITE=\033[37m
 
 # text
@@ -124,7 +119,7 @@ all: ${NAME}
 
 ${NAME}: ${OBJS}
 	@${AR} ${NAME} ${OBJS}
-	@echo "${GREEN}${BOLD}Library ${NAME} created${RESET}"
+	@echo "\n${GREEN}${BOLD}Library ${NAME} created${RESET}	✅\n"
 
 ${OBJS}: ${OBJP}
 
@@ -134,31 +129,33 @@ ${OBJP}:
 			${OBJP}/lib_print/	${OBJP}/lib_proj/	${OBJP}/lib_str/	\
 			${OBJP}/lib_conv/	${OBJP}/lib_maths	${OBJP}/lib_mlx/	\
 			${OBJP}/lib_count/
-	@echo "${CYAN}${BOLD}obj directories created${RESET}"
+	@echo "\n${GREEN}${BOLD}obj directories created${RESET}\n"
 
 ${OBJP}/%.o: ${SRCP}%.c ${INCP}libft.h
-	@echo "${FAINT}${CC} ${CF} -c -o	${RESET}${CYAN}${BOLD}$@${RESET}"
+	@echo "${FAINT}${CC} ${CF} -c -o	${RESET}${CYAN}${BOLD}$@${RESET} ${FAINT}${BLUE}$<${RESET}"
 	@${CC} ${CF} -c -o $@ $<
 
 # Additional rules
 
 norm:
-	${NCF} ${SRCP}
-	${NCD} ${INCP}
+	@echo "\n${BOLD}${CYAN}${NCF}${RESET}\n"
+	@${NCF} ${SRCP}
+	@echo "\n${BOLD}${CYAN}${NCD}${RESET}\n"
+	@${NCD} ${INCP}
 
 comp: ${SRCS} ${MAIN}
-	${CC} ${CF} ${CS} $^
-	${CC} ${CF} ${CG} $^
+	${CC} ${CF} ${CS} $^ -o ${BINARY}1
+	${CC} ${CF} ${CG} $^ -o ${BINARY}2
 
 # Mandatory rules
 
 clean:
 	@${RM} ${OBJS}
-	@echo "${YELLOW}${BOLD}all object files removed${RESET}"
+	@echo "\n${YELLOW}${BOLD}All object files removed${RESET}"
 
 fclean: clean
 	@${RM} ${NAME} ${OBJP}
-	@echo "${YELLOW}All object folders removed${RESET}"
+	@echo "${YELLOW}${BOLD}All object folders removed${RESET}"
 	@echo "${RED}${BOLD}Library ${NAME} removed${RESET}"
 
 re: fclean all

@@ -6,13 +6,13 @@
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 15:59:00 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/19 16:07:24 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/19 16:42:15 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../lib_includes/libft.h"
 
-char	*ft_strcat(char *dst, char *src)
+char	*ft_strcat(char *dst, const char *src)
 {
 	int	a;
 	int	b;

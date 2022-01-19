@@ -6,7 +6,7 @@
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 15:42:33 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/19 15:50:17 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/19 16:41:58 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_unsplit(char **split, char c)
 	while (split[a])
 	{
 		tmp = split[a];
-		split[a] = ft_strjoin(split[a], c);
+		split[a] = ft_strjoin(split[a], &c);
 		free (tmp);
 		a++;
 	}
