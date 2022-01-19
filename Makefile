@@ -6,7 +6,7 @@
 #    By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 14:41:20 by ljohnson          #+#    #+#              #
-#    Updated: 2022/01/18 16:13:32 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/01/19 15:39:30 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,11 +36,10 @@ SRC_PRINT =	ft_int_putchar.c		ft_int_putnbr.c			ft_int_putptr.c		ft_putstr_fd.c	
 			ft_int_putnbr_base.c	ft_putptr_fd.c			ft_putnbr_base_fd.c
 
 SRC_STR =	ft_int_strchr.c			ft_split.c				ft_strchr.c			ft_strdup.c			\
-			ft_strjoin.c			ft_strlcat.c			ft_strlcpy.c		ft_strlen.c			\
-			ft_strncmp.c			ft_strnjoin.c			ft_strnstr.c		ft_strrchr.c		\
-			ft_strstr.c				ft_strtrim.c			ft_substr.c			ft_word_count.c		\
-			ft_strcpy.c				ft_strncpy.c			ft_unsplit.c		ft_heredoc.c		\
-			ft_strcat.c				ft_strncat.c
+			ft_strjoin.c			ft_strncmp.c			ft_strnjoin.c		ft_strnstr.c		\
+			ft_strrchr.c			ft_strstr.c				ft_strtrim.c		ft_substr.c			\
+			ft_strcpy.c				ft_strncpy.c			ft_unsplit.c		ft_strcat.c			\
+			ft_strncat.c
 
 SRC_CONV =	ft_toupper.c			ft_tolower.c			ft_atoi.c			ft_atol.c			\
 			ft_itoa.c				ft_big_atoi.c			ft_big_atol.c		ft_swap.c			\
@@ -52,7 +51,7 @@ SRC_MATHS =	ft_sqrt.c				ft_factorial.c			ft_power.c			ft_get_highest.c	\
 SRC_COUNT = ft_strlcat.c			ft_strlcpy.c			ft_strlen.c			ft_count_word.c		\
 			ft_count_char.c
 
-SRC_MLX =	ft_mlx_square.c			ft_mlx_square_board.c	ft_mlx_point_board.c
+# SRC_MLX =	ft_mlx_square.c			ft_mlx_square_board.c	ft_mlx_point_board.c
 
 SRC_PROJ =	ft_printf.c				get_next_line.c			ft_heredoc.c		ft_gnl_join.c
 
@@ -60,7 +59,8 @@ SRCS =	${addprefix lib_src/lib_bool/,${SRC_BOOL}}		${addprefix lib_src/lib_lst/,
 		${addprefix lib_src/lib_mem/,${SRC_MEM}}		${addprefix lib_src/lib_print/,${SRC_PRINT}}	\
 		${addprefix lib_src/lib_proj/,${SRC_PROJ}}		${addprefix lib_src/lib_str/,${SRC_STR}}		\
 		${addprefix lib_src/lib_maths/,${SRC_MATHS}}	${addprefix lib_src/lib_conv/,${SRC_CONV}}		\
-		${addprefix lib_src/lib_mlx/,${SRC_MLX}}		${addprefix lib_src/lib_count/,${SRC_COUNT}}
+		${addprefix lib_src/lib_count/,${SRC_COUNT}}	\
+		# ${addprefix lib_src/lib_mlx/,${SRC_MLX}}
 
 #//////////////////////////////////////////////////////////////////////////////
 #		OBJ CREATION
@@ -88,6 +88,33 @@ AR = ar rcs
 RM = rm -rf
 
 #//////////////////////////////////////////////////////////////////////////////
+#		COLORS
+#//////////////////////////////////////////////////////////////////////////////
+
+# colors
+BLACK=\033[30m
+RED=\033[31m
+LIGHT_RED=\033[91m
+GREEN=\033[32m
+LIGHT_GREEN=\033[92m
+YELLOW=\033[33m
+LIGHT_YELLOW=\033[93m
+BLUE=\033[34m
+LIGHT_BLUE=\033[94m
+PURPLE=\033[35m
+LIGHT_PURPLE=\033[95m
+CYAN=\033[36m
+LIGHT_CYAN=\033[96m
+WHITE=\033[37m
+
+# text
+RESET=\033[0m
+BOLD=\033[1m
+FAINT=\033[2m
+ITALIC=\033[3m
+UNDERLINE=\033[4m
+
+#//////////////////////////////////////////////////////////////////////////////
 #		RULES
 #//////////////////////////////////////////////////////////////////////////////
 
@@ -97,19 +124,21 @@ all: ${NAME}
 
 ${NAME}: ${OBJS}
 	@${AR} ${NAME} ${OBJS}
-	@echo ${NAME} complete
+	@echo "${GREEN}${BOLD}Library ${NAME} created${RESET}"
 
 ${OBJS}: ${OBJP}
 
 ${OBJP}:
-	@mkdir ${OBJP}
+	@mkdir	${OBJP}
 	@mkdir	${OBJP}/lib_bool/	${OBJP}/lib_lst/	${OBJP}/lib_mem/	\
 			${OBJP}/lib_print/	${OBJP}/lib_proj/	${OBJP}/lib_str/	\
-			${OBJP}/lib_conv/	${OBJP}/lib_maths	${OBJP}/lib_mlx/
-	@echo creating obj directories
+			${OBJP}/lib_conv/	${OBJP}/lib_maths	${OBJP}/lib_mlx/	\
+			${OBJP}/lib_count/
+	@echo "${CYAN}${BOLD}obj directories created${RESET}"
 
 ${OBJP}/%.o: ${SRCP}%.c ${INCP}libft.h
-	${CC} ${CF} -c -o $@ $<
+	@echo "${FAINT}${CC} ${CF} -c -o	${RESET}${CYAN}${BOLD}$@${RESET}"
+	@${CC} ${CF} -c -o $@ $<
 
 # Additional rules
 
@@ -125,10 +154,11 @@ comp: ${SRCS} ${MAIN}
 
 clean:
 	@${RM} ${OBJS}
-	@echo all object files removed
+	@echo "${YELLOW}${BOLD}all object files removed${RESET}"
 
 fclean: clean
 	@${RM} ${NAME} ${OBJP}
-	@echo library removed
+	@echo "${YELLOW}All object folders removed${RESET}"
+	@echo "${RED}${BOLD}Library ${NAME} removed${RESET}"
 
 re: fclean all

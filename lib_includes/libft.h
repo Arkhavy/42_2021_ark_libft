@@ -6,7 +6,7 @@
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:31:48 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/18 16:12:41 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/19 08:14:13 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *str);
 
 size_t	ft_word_count(const char *str);
-size_t	count_char(long nb);
+size_t	ft_count_char(long nb);
 
 /*/////////////////////////////////////////////////////////////////////////////
 		MATHS FUNCTIONS
