@@ -6,7 +6,7 @@
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:31:48 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/21 09:25:32 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/21 09:41:25 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,10 @@ size_t	ft_count_char(long nb);
 
 int		ft_approx_sqrt(int nb);
 int		ft_sqrt(int nb);
+int		ft_factorial(int nb);
+int		ft_power(int nb, int power);
+int		ft_get_highest(int nb1, int nb2);
+int		ft_find_next_prime(int nb);
 
 /*/////////////////////////////////////////////////////////////////////////////
 		MLX FUNCTIONS AND STRUCTS
