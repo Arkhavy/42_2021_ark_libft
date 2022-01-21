@@ -6,7 +6,7 @@
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:31:48 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/19 16:43:21 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/21 08:41:31 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -170,7 +170,7 @@ int		ft_int_putnbr(int n);
 int		ft_int_putptr(unsigned long long nbr);
 int		ft_int_putnbr_base(unsigned int nbr, char *base);
 void	ft_putptr_fd(unsigned long long nbr, int fd);
-void	ft_putnbr_base_fd(unsigned int nbr, char *base);
+void	ft_putnbr_base_fd(unsigned int nbr, char *base, int fd);
 
 /*/////////////////////////////////////////////////////////////////////////////
 		LINKED LISTS FUNCTIONS AND STRUCT

@@ -6,7 +6,7 @@
 #    By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 14:41:20 by ljohnson          #+#    #+#              #
-#    Updated: 2022/01/19 17:00:34 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/01/21 08:30:17 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -156,6 +156,6 @@ clean:
 fclean: clean
 	@${RM} ${NAME} ${OBJP}
 	@echo "${YELLOW}${BOLD}All object folders removed${RESET}"
-	@echo "${RED}${BOLD}Library ${NAME} removed${RESET}"
+	@echo "${RED}${BOLD}Library ${NAME} removed${RESET}\n"
 
 re: fclean all
