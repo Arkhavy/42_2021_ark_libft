@@ -6,7 +6,7 @@
 /*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:31:48 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/21 08:41:31 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/21 09:25:32 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -200,6 +200,6 @@ char	*get_next_line(int fd);
 int		ft_printf(const char *format, ...);
 
 char	*ft_gnl_join(int fd);
-int		ft_heredoc(int fd);
+int		ft_heredoc(char *limiter);
 
 #endif
