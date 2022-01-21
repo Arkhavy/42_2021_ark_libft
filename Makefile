@@ -6,7 +6,7 @@
 #    By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 14:41:20 by ljohnson          #+#    #+#              #
-#    Updated: 2022/01/21 08:30:17 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/01/21 09:43:34 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -127,8 +127,8 @@ ${OBJP}:
 	@mkdir	${OBJP}
 	@mkdir	${OBJP}/lib_bool/	${OBJP}/lib_lst/	${OBJP}/lib_mem/	\
 			${OBJP}/lib_print/	${OBJP}/lib_proj/	${OBJP}/lib_str/	\
-			${OBJP}/lib_conv/	${OBJP}/lib_maths	${OBJP}/lib_mlx/	\
-			${OBJP}/lib_count/
+			${OBJP}/lib_conv/	${OBJP}/lib_maths/	${OBJP}/lib_count/	\
+			${OBJP}/lib_mlx/
 	@echo "\n${GREEN}${BOLD}obj directories created${RESET}\n"
 
 ${OBJP}/%.o: ${SRCP}%.c ${INCP}libft.h
