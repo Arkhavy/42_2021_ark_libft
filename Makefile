@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 14:41:20 by ljohnson          #+#    #+#              #
-#    Updated: 2022/01/21 09:43:34 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/01/23 14:50:27 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -129,7 +129,7 @@ ${OBJP}:
 			${OBJP}/lib_print/	${OBJP}/lib_proj/	${OBJP}/lib_str/	\
 			${OBJP}/lib_conv/	${OBJP}/lib_maths/	${OBJP}/lib_count/	\
 			${OBJP}/lib_mlx/
-	@echo "\n${GREEN}${BOLD}obj directories created${RESET}\n"
+	@echo "\n${GREEN}${BOLD}obj directories created${RESET}	✅\n"
 
 ${OBJP}/%.o: ${SRCP}%.c ${INCP}libft.h
 	@echo "${FAINT}${CC} ${CF} -c -o	${RESET}${CYAN}${BOLD}$@${RESET} ${FAINT}${BLUE}$<${RESET}"

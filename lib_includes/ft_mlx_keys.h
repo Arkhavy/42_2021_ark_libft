@@ -3,123 +3,133 @@
 /*                                                        :::      ::::::::   */
 /*   ft_mlx_keys.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 12:54:39 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/18 12:55:31 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/24 17:43:24 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_MLX_KEYS_H
 # define FT_MLX_KEYS_H
 
-# define KEYBOARD "ASDFHGZXCV BQWERYT123465=97-80]OU[IP LJ'K;\\,/NM.  `"
+# ifndef MLX_KEYBOARD
+#  define MLX_KEYBOARD "ASDFHGZXCV BQWERYT123465=97-80]OU[IP LJ'K;\\,/NM.  `"
+# endif //MLX_KEYBOARD
 
-// Keyboard First Row
 // Q W E R T Y U I O P
+enum	e_firstrow
+{
+	K_Q = 12,
+	K_W = 13,
+	K_E = 14,
+	K_R = 15,
+	K_T = 17,
+	K_Y = 16,
+	K_U = 32,
+	K_I = 34,
+	K_O = 31,
+	K_P = 35,
+};
 
-# define K_Q 12
-# define K_W 13
-# define K_E 14
-# define K_R 15
-# define K_T 17
-# define K_Y 16
-# define K_U 32
-# define K_I 34
-# define K_O 31
-# define K_P 35
-
-// Keyboard Second Row
 // A S D F G H J K L
+enum	e_secondrow
+{
+	K_A = 0,
+	K_S = 1,
+	K_D = 2,
+	K_F = 3,
+	K_G = 5,
+	K_H = 4,
+	K_J = 38,
+	K_K = 40,
+	K_L = 37,
+};
 
-# define K_A 0
-# define K_S 1
-# define K_D 2
-# define K_F 3
-# define K_G 5
-# define K_H 4
-# define K_J 38
-# define K_K 40
-# define K_L 37
-
-//Keyboard Third Row
 // Z X C V B N M
+enum	e_thirdrow
+{
+	K_Z = 6,
+	K_X = 7,
+	K_C = 8,
+	K_V = 9,
+	K_B = 11,
+	K_N = 45,
+	K_M = 46,
+};
 
-# define K_Z 6
-# define K_X 7
-# define K_C 8
-# define K_V 9
-# define K_B 11
-# define K_N 45
-# define K_M 46
-
-// Keyboard Number Row
 // 1 2 3 4 5 6 7 8 9 0 - = ~
+enum	e_numberrow
+{
+	K_1 = 18,
+	K_2 = 19,
+	K_3 = 20,
+	K_4 = 21,
+	K_5 = 23,
+	K_6 = 22,
+	K_7 = 26,
+	K_8 = 28,
+	K_9 = 25,
+	K_0 = 29,
+	K_MINUS = 27,
+	K_EQUAL = 24,
+	K_TILDE = 50,
+};
 
-# define K_1 18
-# define K_2 19
-# define K_3 20
-# define K_4 21
-# define K_5 23
-# define K_6 22
-# define K_7 26
-# define K_8 28
-# define K_9 25
-# define K_0 29
-# define K_MINUS 27
-# define K_EQUAL 24
-# define K_TILDE 50
-
-// Keyboard Pav Num
 // 0 1 2 3 4 5 6 7 8 9 / * - + .
+enum	e_pavnum
+{
+	PV_0 = 82,
+	PV_1 = 83,
+	PV_2 = 84,
+	PV_3 = 85,
+	PV_4 = 86,
+	PV_5 = 87,
+	PV_6 = 88,
+	PV_7 = 89,
+	PV_8 = 91,
+	PV_9 = 92,
+	PV_SLASH = 75,
+	PV_STAR = 67,
+	PV_MINUS = 78,
+	PV_PLUS = 69,
+	PV_ENT = 76,
+	PV_POINT = 65,
+};
 
-# define PV_0 82
-# define PV_1 83
-# define PV_2 84
-# define PV_3 85
-# define PV_4 86
-# define PV_5 87
-# define PV_6 88
-# define PV_7 89
-# define PV_8 91
-# define PV_9 92
-# define PV_SLASH 75
-# define PV_STAR 67
-# define PV_MINUS 78
-# define PV_PLUS 69
-# define PV_ENT 76
-# define PV_POINT 65
-
-// Keyboard Weird Characters
 // [ ] \ ; ' , . /
+enum	e_weirdchar
+{
+	K_BRACKET1 = 33,
+	K_BRACKET2 = 30,
+	K_BACKSLASH = 42,
+	K_SEMICOLON = 41,
+	K_QUOTE = 39,
+	K_COMMA = 43,
+	K_DOT = 47,
+	K_SLASH = 44,
+};
 
-# define K_BRACKET1 33
-# define K_BRACKET2 30
-# define K_BACKSLASH 42
-# define K_PCOMMA 41
-# define K_QUOTE 39
-# define K_COMMA 43
-# define K_DOT 47
-# define K_SLASH 44
+// Special Characters
+enum	e_specchar
+{
+	K_DEL = 51,
+	K_ESC = 53,
+	K_SPACE = 49,
+	K_CTRL = 256,
+	K_ALT = 261,
+	K_CTRLGR = 269,
+	K_ATLGR = 262,
+	K_CMD = 259,
+	K_ENT = 36,
+	K_SHIFT = 257,
+	K_SHIFTGR = 258,
+	K_CAPS = 272,
+	K_TAB = 48,
+	K_UP = 126,
+	K_LEFT = 123,
+	K_DOWN = 125,
+	K_RIGHT = 124,
+};
 
-// Keyboard Special Characters
-
-# define K_DEL 51
-# define K_ESC 53
-# define K_SP 49
-# define K_CTL 256
-# define K_ALT 261
-# define K_CTLGR 269
-# define K_ALTGR 262
-# define K_CMD 259
-# define K_ENT 36
-# define K_SHIFT 257
-# define K_SHIFTGR 258
-# define K_MAJ 272
-# define K_TAB 48
-# define K_UP 126
-# define K_LEFT 123
-# define K_DOWN 125
-# define K_RIGHT 124
-
-#endif
+#endif //FT_MLX_KEYS_H

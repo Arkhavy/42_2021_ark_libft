@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:31:48 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/21 09:41:25 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/24 17:43:53 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,39 @@
 # include <sys/wait.h>
 # include <stdio.h>
 # include "ft_mlx_keys.h"
+# include <math.h>
 
 /*/////////////////////////////////////////////////////////////////////////////
 		DEFINES
 *//////////////////////////////////////////////////////////////////////////////
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 0
-# endif
+enum	e_const
+{
+	STDIN = 0,
+	STDOUT = 1,
+	STDERR = 2,
+	TRUE = 1,
+	FALSE = 0,
+	NEGATIVE = -1,
+	POSITIVE = 1,
+	BUFFER_SIZE = 1,
+};
 
-# define UPPERHEX "0123456789ABCDEF"
-# define LOWERHEX "0123456789abcdef"
-# define BASEDEC "0123456789"
-# define PRINTFCSET "scdiuxXp"
+# ifndef UPPERHEX
+#  define UPPERHEX "0123456789ABCDEF"
+# endif //UPPERHEX
+
+# ifndef LOWERHEX
+#  define LOWERHEX "0123456789abcdef"
+# endif //LOWERHEX
+
+# ifndef BASEDEC
+#  define BASEDEC "0123456789"
+# endif //BASEDEC
+
+# ifndef PRINTFCSET
+#  define PRINTFCSET "scdiuxXp"
+# endif //PRINTFCSET
 
 /*/////////////////////////////////////////////////////////////////////////////
 		BOOLEAN FUNCTIONS
@@ -206,4 +226,4 @@ int		ft_printf(const char *format, ...);
 char	*ft_gnl_join(int fd);
 int		ft_heredoc(char *limiter);
 
-#endif
+#endif //LIBFT_H
