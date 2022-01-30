@@ -6,7 +6,7 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:31:48 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/24 17:43:53 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/25 09:32:53 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 # include <stddef.h>
 # include <sys/wait.h>
 # include <stdio.h>
-# include "ft_mlx_keys.h"
 # include <math.h>
+# include "ft_mlx_keys.h"
 
 /*/////////////////////////////////////////////////////////////////////////////
 		DEFINES

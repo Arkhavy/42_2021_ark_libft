@@ -6,7 +6,7 @@
 #    By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 14:41:20 by ljohnson          #+#    #+#              #
-#    Updated: 2022/01/23 14:50:27 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/01/26 09:33:58 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,8 +82,7 @@ CF = -Wall -Wextra -Werror
 CS = -g -fsanitize=address
 CG = -g3
 
-NCF = norminette -R CheckForbiddenSourceHeader
-NCD = norminette -R CheckDefine
+NC = norminette
 
 AR = ar rcs
 RM = rm -rf
