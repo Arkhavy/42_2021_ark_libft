@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_factorial.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 09:32:29 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/21 09:33:21 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 18:04:43 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib_includes/libft.h"
+#include "libft.h"
 
 int	ft_factorial(int nb)
 {

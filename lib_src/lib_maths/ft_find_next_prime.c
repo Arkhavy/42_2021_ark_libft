@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 09:39:42 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/21 09:40:49 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 18:04:46 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib_includes/libft.h"
+#include "libft.h"
 
 int	ft_find_next_prime(int nb)
 {

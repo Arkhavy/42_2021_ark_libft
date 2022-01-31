@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 12:15:21 by ljohnson          #+#    #+#             */
-/*   Updated: 2021/12/13 08:50:29 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 18:07:49 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "../../lib_includes/libft.h"
+#include "libft.h"
 
 static int	count_str(const char *s, char c)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_count_word.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 13:35:01 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/18 13:41:15 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 18:03:51 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib_includes/libft.h"
+#include "libft.h"
 
 int	ft_count_word(const char *str, const char c)
 {

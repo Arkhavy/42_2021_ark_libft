@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_int_putptr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 13:36:52 by ljohnson          #+#    #+#             */
-/*   Updated: 2021/12/03 12:46:02 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 18:06:57 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib_includes/libft.h"
+#include "libft.h"
 
 static int	ft_int_putptr_base(unsigned long long nbr, char *base)
 {

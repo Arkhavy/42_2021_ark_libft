@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_tolower.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 13:47:46 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/18 13:53:30 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 18:03:21 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib_includes/libft.h"
+#include "libft.h"
 
 char	*ft_str_tolower(const char *str)
 {

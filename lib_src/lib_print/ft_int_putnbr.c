@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_int_putnbr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 08:29:02 by ljohnson          #+#    #+#             */
-/*   Updated: 2021/12/03 12:46:00 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 18:06:54 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib_includes/libft.h"
+#include "libft.h"
 
 int	ft_int_putnbr(int n)
 {

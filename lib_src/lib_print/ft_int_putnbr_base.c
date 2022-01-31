@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_int_putnbr_base.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 11:31:02 by ljohnson          #+#    #+#             */
-/*   Updated: 2021/12/03 12:45:59 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 18:06:50 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib_includes/libft.h"
+#include "libft.h"
 
 int	ft_int_putnbr_base(unsigned int nbr, char *base)
 {

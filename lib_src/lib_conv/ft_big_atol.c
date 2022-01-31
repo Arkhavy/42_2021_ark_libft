@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_big_atol.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 13:13:17 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/18 13:16:31 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 18:03:14 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib_includes/libft.h"
+#include "libft.h"
 
 long	ft_big_atol(const char *str)
 {

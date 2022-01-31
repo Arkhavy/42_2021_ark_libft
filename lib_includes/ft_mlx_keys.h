@@ -6,12 +6,14 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 12:54:39 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/24 17:43:24 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 18:01:22 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_MLX_KEYS_H
 # define FT_MLX_KEYS_H
+
+# include "libft.h"
 
 # ifndef MLX_KEYBOARD
 #  define MLX_KEYBOARD "ASDFHGZXCV BQWERYT123465=97-80]OU[IP LJ'K;\\,/NM.  `"

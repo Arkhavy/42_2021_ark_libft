@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_heredoc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 09:18:57 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/21 09:24:57 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 18:07:32 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib_includes/libft.h"
+#include "libft.h"
 
 static int	ft_check_limiter(char *prompt, char *limiter)
 {

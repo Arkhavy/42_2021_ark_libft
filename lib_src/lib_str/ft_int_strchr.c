@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_int_strchr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 15:13:18 by ljohnson          #+#    #+#             */
-/*   Updated: 2021/12/03 12:47:09 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 18:07:45 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib_includes/libft.h"
+#include "libft.h"
 
 int	ft_int_strchr(const char *s, int c)
 {

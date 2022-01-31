@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isnotcharset.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 08:48:34 by ljohnson          #+#    #+#             */
-/*   Updated: 2021/12/10 08:49:13 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 18:02:45 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib_includes/libft.h"
+#include "libft.h"
 
 int	ft_isnotcharset(char c, char *set)
 {

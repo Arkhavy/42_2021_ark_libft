@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_count_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 13:30:31 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/18 13:43:32 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 18:03:48 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib_includes/libft.h"
+#include "libft.h"
 
 size_t	ft_count_char(long nb)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_mlx_square_board.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 16:03:37 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/18 16:08:50 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 18:06:38 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib_includes/libft.h"
+#include "libft.h"
 
 void	ft_mlx_square_board(t_mlxp program, int coeff, int hex_color)
 {

@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_toupper.c                                   :+:      :+:    :+:   */
+/*   ft_proj.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/18 13:51:52 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:03:25 by ljohnson         ###   ########lyon.fr   */
+/*   Created: 2022/01/31 17:59:02 by ljohnson          #+#    #+#             */
+/*   Updated: 2022/01/31 18:00:30 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_PROJ_H
+# define FT_PROJ_H
 
-char	*ft_str_toupper(const char *str)
-{
-	char	*newstr;
-	int		a;
-	int		len;
+# include "libft.h"
 
-	a = 0;
-	len = ft_strlen(str);
-	newstr = malloc(sizeof(char) * len + 1);
-	if (!newstr)
-		return (NULL);
-	while (a < len)
-	{
-		if (ft_islower(str[a]))
-			newstr[a] = ft_toupper(str[a]);
-		else
-			newstr[a] = str[a];
-		a++;
-	}
-	newstr[a] = '\0';
-	return (newstr);
-}
+/*/////////////////////////////////////////////////////////////////////////////
+		PROJECTS FUNCTIONS
+*//////////////////////////////////////////////////////////////////////////////
+
+char	*get_next_line(int fd);
+int		ft_printf(const char *format, ...);
+
+char	*ft_gnl_join(int fd);
+int		ft_heredoc(char *limiter);
+
+#endif //FT_PROJ_H
