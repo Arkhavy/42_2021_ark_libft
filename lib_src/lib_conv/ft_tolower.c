@@ -6,7 +6,7 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:13:14 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:03:39 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/02/06 09:55:34 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	if (c >= 'A' && c <= 'Z')
+	if (ft_isupper(c))
 		c += 32;
 	return (c);
 }

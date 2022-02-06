@@ -6,7 +6,7 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 18:50:20 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:08:42 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/02/06 10:10:02 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 		return (NULL);
 	a = 0;
 	s_len = ft_strlen(s);
-	if (len > ft_strlen((char *)s))
-		len = ft_strlen((char *)s);
+	if (len > s_len)
+		len = s_len;
 	newstr = malloc(sizeof(char) * len + 1);
 	if (!newstr)
 		return (NULL);
