@@ -6,7 +6,7 @@
 #    By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/31 16:35:00 by ljohnson          #+#    #+#              #
-#    Updated: 2022/02/02 12:48:44 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/02/09 11:57:12 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,8 +62,6 @@ SRC_MATHS	:=	ft_sqrt.c				ft_factorial.c		ft_get_highest.c	\
 SRC_COUNT	:=	ft_strlcat.c			ft_strlcpy.c		ft_strlen.c			\
 				ft_count_word.c			ft_count_char.c
 
-# SRC_MLX	:=	ft_mlx_square_board.c	ft_mlx_square.c		ft_mlx_point_board.c
-
 SRC_PROJ	:=	ft_printf.c				get_next_line.c		ft_heredoc.c		\
 				ft_gnl_join.c
 
@@ -84,7 +82,6 @@ SRCS		:=	$(addprefix $(SRCP)lib_bool/,$(SRC_BOOL))	\
 				$(addprefix $(SRCP)lib_maths/,$(SRC_MATHS))	\
 				$(addprefix $(SRCP)lib_conv/,$(SRC_CONV))	\
 				$(addprefix $(SRCP)lib_count/,$(SRC_COUNT))
-#				$(addprefix $(SRCP)lib_mlx/,$(SRC_MLX))
 
 INCS		:=	$(addprefix $(INCP),$(HEADERS))
 OBJS		:=	$(subst $(SRCP),$(OBJP),$(SRCS:.c=.o))
@@ -133,7 +130,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS) Makefile
 	$(AR) $(NAME) $(OBJS)
-	echo "\n$(GREEN)$(BOLD)Library $(NAME) created$(RST)	✅\n"
+	printf "\n$(GREEN)$(BOLD)Library $(NAME) created$(RST)	✅\n"
 
 $(OBJS): $(OBJP)
 
@@ -141,17 +138,17 @@ $(OBJP):
 	mkdir -p	$(OBJP)				$(OBJP)/lib_bool/	$(OBJP)/lib_lst/	\
 				$(OBJP)/lib_mem/	$(OBJP)/lib_print/	$(OBJP)/lib_proj/	\
 				$(OBJP)/lib_str/	$(OBJP)/lib_conv/	$(OBJP)/lib_maths/	\
-				$(OBJP)/lib_count/	$(OBJP)/lib_mlx/
-	echo "\n$(GREEN)$(BOLD)obj directories created$(RST)	✅\n"
+				$(OBJP)/lib_count/
+	printf "$(GREEN)$(BOLD)obj directories created$(RST)	✅\n"
 
 $(OBJP)%.o: $(SRCP)%.c $(INCS) Makefile
-	echo "$(FAINT)$(CC) $(CF) -I $(INCP) -c -o $(RST)$(CYAN)$(BOLD)$@$(RST) $(FAINT)$(BLUE)$<$(RST)"
+	printf "$(ERASE)$(FAINT)$(CC) $(CF) -I $(INCP) -c -o $(RST)$(CYAN)$(BOLD)$@$(RST) $(FAINT)$(BLUE)$<$(RST)"
 	$(CC) $(CF) -I $(INCP) -c $< -o $@
 
 # Additional rules
 
 norm:
-	echo "\n$(BOLD)$(CYAN)$(NC) $(SRCP) $(INCP)$(RST)\n"
+	printf "\n$(BOLD)$(CYAN)$(NC) $(SRCP) $(INCP)$(RST)\n"
 	$(NC) $(SRCS)
 	$(NC) $(INCS)
 
@@ -163,11 +160,11 @@ comp: $(SRCS) $(MAIN)
 
 clean:
 	$(RM) $(OBJS)
-	echo "\n$(YELLOW)$(BOLD)All object files removed$(RST)"
+	printf "$(YELLOW)$(BOLD)All object files removed$(RST)\n"
 
 fclean: clean
 	$(RM) $(NAME) $(OBJP)
-	echo "$(YELLOW)$(BOLD)All object folders removed$(RST)"
-	echo "$(RED)$(BOLD)Library $(NAME) removed $(RST)\n"
+	printf "$(YELLOW)$(BOLD)All object folders removed$(RST)\n"
+	printf "$(RED)$(BOLD)Library $(NAME) removed $(RST)\n"
 
 re: fclean all

@@ -6,7 +6,7 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 14:52:09 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:03:08 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 08:32:05 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,28 @@
 long	ft_atol(const char *str)
 {
 	long	result;
-	size_t	res;
 	int		negative;
+	int		a;
 
 	negative = 1;
-	res = 0;
-	while (*str && (*str == ' ' || (*str >= 9 && *str <= 13)))
-		str++;
-	if (*str == '-' || *str == '+')
+	result = 0;
+	a = 0;
+	while (str[a] && (str[a] == ' ' || (str[a] >= 9 && str[a] <= 13)))
+		a++;
+	if (str[a] == '-' || str[a] == '+')
 	{
-		if (*str == '-')
+		if (str[a] == '-')
 			negative = -negative;
-		str++;
+		a++;
 	}
-	while (ft_isdigit(*str))
+	while (ft_isdigit(str[a]))
 	{
-		res = res * 10 + *str - '0';
-		str++;
+		result = result * 10 + str[a] - '0';
+		a++;
 	}
-	if (res > LONG_MAX && negative == -1)
+	if (result > LONG_MAX && negative == -1)
 		return (0);
-	else if (res > LONG_MAX && negative == 1)
+	else if (result > LONG_MAX && negative == 1)
 		return (-1);
-	result = res * negative;
-	return (result);
+	return (result * negative);
 }

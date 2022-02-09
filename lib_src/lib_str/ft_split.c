@@ -5,78 +5,38 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 12:15:21 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:07:49 by ljohnson         ###   ########lyon.fr   */
+/*   Created: 2022/02/09 16:49:50 by ljohnson          #+#    #+#             */
+/*   Updated: 2022/02/09 16:49:59 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
-
-static int	count_str(const char *s, char c)
-{
-	size_t	a;
-	size_t	nb_str;
-
-	a = 0;
-	nb_str = 0;
-	while (s[a])
-	{
-		if ((a == 0) && s[0] != c)
-			nb_str++;
-		else if (s[a] != c && s[a - 1] == c)
-			nb_str++;
-		a++;
-	}
-	return (nb_str);
-}
-
-static char	*ft_splitdup(const char *s, char c)
-{
-	char	*str;
-	size_t	a;
-
-	a = 0;
-	while (s[a] && s[a] != c)
-		a++;
-	str = malloc(sizeof(char) * (a + 1));
-	if (!str)
-		return (NULL);
-	a = 0;
-	while (s[a] && !(s[a] == c))
-	{
-		str[a] = s[a];
-		a++;
-	}
-	str[a] = '\0';
-	return (str);
-}
 
 char	**ft_split(const char *s, char c)
 {
-	char	**str;
-	size_t	nb_str;
+	char	**split;
 	size_t	a;
 
 	if (!s)
 		return (NULL);
-	a = 0;
-	nb_str = count_str(s, c);
-	str = malloc(sizeof(char *) * (nb_str + 1));
-	if (!str)
+	split = malloc(sizeof(char *) * (ft_count_word(s, c) + 1));
+	if (!split)
 		return (NULL);
+	a = 0;
 	while (*s)
 	{
 		while (*s == c)
 			++s;
 		if (*s && *s != c)
 		{
-			str[a] = ft_splitdup(s, c);
-			a++;
+			if (ft_int_strchr(s, c) != -1)
+				split[a++] = ft_substr(s, 0, ft_int_strchr(s, c));
+			else
+				split[a++] = ft_substr(s, 0, ft_int_strchr(s, '\0'));
 			while (*s && *s != c)
 				s++;
 		}
 	}
-	str[a] = NULL;
-	return (str);
+	split[a] = NULL;
+	return (split);
 }

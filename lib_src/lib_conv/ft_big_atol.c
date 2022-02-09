@@ -6,7 +6,7 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 13:13:17 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:03:14 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 08:35:17 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,11 @@
 long	ft_big_atol(const char *str)
 {
 	long	result;
-	size_t	res;
 	int		negative;
 	int		a;
 
 	negative = 1;
-	res = 0;
+	result = 0;
 	a = 0;
 	while (str[a] && (ft_isspace(str[a]) || (str[a] >= 9 && str[a] <= 13)))
 		a++;
@@ -32,9 +31,8 @@ long	ft_big_atol(const char *str)
 	}
 	while (ft_isdigit(str[a]))
 	{
-		res = res * 10 + str[a] - '0';
+		result = result * 10 + str[a] - '0';
 		a++;
 	}
-	result = res * negative;
-	return (result);
+	return (result * negative);
 }
