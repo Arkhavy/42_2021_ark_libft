@@ -6,7 +6,7 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:31:48 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:02:02 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 17:35:43 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@
 # include "ft_lst.h"
 # include "ft_maths.h"
 # include "ft_mem.h"
-# include "ft_mlx_keys.h"
-# include "ft_mlx.h"
 # include "ft_print.h"
 # include "ft_proj.h"
 # include "ft_str.h"

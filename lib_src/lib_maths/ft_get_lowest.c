@@ -1,33 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_get_lowest.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/10 14:19:00 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/02/10 14:28:09 by ljohnson         ###   ########lyon.fr   */
+/*   Created: 2022/02/10 13:15:42 by ljohnson          #+#    #+#             */
+/*   Updated: 2022/02/10 13:16:10 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(const char *s1, const char *set)
+int	ft_get_lowest(int nb1, int nb2)
 {
-	const char	*start;
-	const char	*end;
-	char		*str;
-
-	if (!s1 || !set)
-		return (NULL);
-	start = s1;
-	end = s1 + ft_strlen(s1) - 1;
-	while (*start && ft_strchr(set, *start))
-		start++;
-	while (end > s1 && ft_strchr(set, *end))
-		end--;
-	if (start >= end)
-		return (NULL);
-	str = ft_substr(start, 0, end - start + 1);
-	return (str);
+	if (nb1 < nb2)
+		return (nb1);
+	return (nb2);
 }

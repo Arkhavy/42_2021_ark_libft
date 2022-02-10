@@ -5,65 +5,66 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/01/31 16:35:00 by ljohnson          #+#    #+#              #
-#    Updated: 2022/02/09 11:57:12 by ljohnson         ###   ########lyon.fr    #
+#    Created: 2022/02/10 09:59:23 by ljohnson          #+#    #+#              #
+#    Updated: 2022/02/10 13:17:13 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
-.PHONY: all clean fclean re norm comp
+.PHONY: all clean fclean re norm
 .SILENT:
 
-NAME := libft.a
-MAIN :=
-BINARY :=
+NAME		:= libft.a
+MAIN		:=
+BINARY		:=
 
 #//////////////////////////////////////////////////////////////////////////////
 #		ALL FILES
 #//////////////////////////////////////////////////////////////////////////////
 
-HEADERS		:=	libft.h					ft_bool.h			ft_conv.h			\
-				ft_count.h				ft_lst.h			ft_maths.h			\
-				ft_mem.h				ft_mlx_keys.h		ft_mlx.h			\
-				ft_print.h				ft_proj.h			ft_str.h
+HEADERS		:=	libft.h				ft_bool.h				ft_conv.h				\
+				ft_count.h			ft_lst.h				ft_maths.h				\
+				ft_mem.h			ft_print.h				ft_proj.h				\
+				ft_str.h
 
-SRC_BOOL	:=	ft_isalnum.c			ft_isalpha.c		ft_isascii.c		\
-				ft_isdigit.c			ft_isprint.c		ft_ischarset.c		\
-				ft_isnotcharset.c		ft_isupper.c		ft_islower.c		\
-				ft_isspace.c			ft_isprime.c
+SRC_BOOL	:=	ft_isalnum.c		ft_isalpha.c			ft_isascii.c			\
+				ft_ischarset.c		ft_isdigit.c			ft_islower.c			\
+				ft_isnotcharset.c	ft_isprime.c			ft_isprint.c			\
+				ft_isspace.c		ft_isupper.c
 
-SRC_LST		:=	ft_lstadd_back.c		ft_lstadd_front.c	ft_lstclear.c		\
-				ft_lstdelone.c			ft_lstiter.c		ft_lstlast.c		\
-				ft_lstmap.c				ft_lstnew.c			ft_lstsize.c
+SRC_CONV	:=	ft_atoi.c			ft_atol.c				ft_big_atoi.c			\
+				ft_big_atol.c		ft_itoa.c				ft_str_tolower.c		\
+				ft_str_toupper.c	ft_striteri.c			ft_strmapi.c			\
+				ft_swap.c			ft_tolower.c			ft_toupper.c
 
-SRC_MEM		:=	ft_bzero.c				ft_calloc.c			ft_memchr.c			\
-				ft_memcmp.c				ft_memcpy.c			ft_memmove.c		\
-				ft_memset.c				ft_free.c			ft_free_split.c
+SRC_COUNT	:=	ft_count_char.c		ft_count_word.c			ft_strlcat.c			\
+				ft_strlcpy.c		ft_strlen.c
 
-SRC_PRINT	:=	ft_int_putchar.c		ft_int_putnbr.c		ft_int_putptr.c		\
-				ft_putstr_fd.c			ft_putchar_fd.c		ft_putendl_fd.c		\
-				ft_putnbr_fd.c			ft_int_putstr.c		ft_putptr_fd.c		\
-				ft_putnbr_base_fd.c		ft_int_putnbr_base.c
+SRC_LST		:=	ft_lstadd_back.c	ft_lstadd_front.c		ft_lstclear.c			\
+				ft_lstdelone.c		ft_lstiter.c			ft_lstlast.c			\
+				ft_lstmap.c			ft_lstnew.c				ft_lstsize.c
 
-SRC_STR		:=	ft_int_strchr.c			ft_split.c			ft_strchr.c			\
-				ft_strdup.c				ft_strjoin.c		ft_strncmp.c		\
-				ft_strnjoin.c			ft_strnstr.c		ft_strrchr.c		\
-				ft_strstr.c				ft_strtrim.c		ft_substr.c			\
-				ft_strcpy.c				ft_strncpy.c		ft_unsplit.c		\
-				ft_strcat.c				ft_strncat.c		ft_strfreejoin.c
+SRC_MATHS	:=	ft_approx_sqrt.c	ft_factorial.c			ft_find_next_prime.c	\
+				ft_get_highest.c	ft_power.c				ft_sqrt.c				\
+				ft_get_lowest.c
 
-SRC_CONV	:=	ft_toupper.c			ft_tolower.c		ft_atoi.c			\
-				ft_atol.c				ft_itoa.c			ft_big_atoi.c		\
-				ft_big_atol.c			ft_swap.c			ft_str_toupper.c	\
-				ft_str_tolower.c		ft_striteri.c		ft_strmapi.c
+SRC_MEM		:=	ft_bzero.c			ft_calloc.c				ft_free_split.c			\
+				ft_free.c			ft_memchr.c				ft_memcmp.c				\
+				ft_memcpy.c			ft_memmove.c			ft_memset.c
 
-SRC_MATHS	:=	ft_sqrt.c				ft_factorial.c		ft_get_highest.c	\
-				ft_find_next_prime.c	ft_power.c			ft_approx_sqrt.c
+SRC_PRINT	:=	ft_int_putchar.c	ft_int_putnbr_base.c	ft_int_putnbr.c			\
+				ft_int_putptr.c		ft_int_putstr.c			ft_putchar_fd.c			\
+				ft_putendl_fd.c		ft_putnbr_base_fd.c		ft_putnbr_fd.c			\
+				ft_putptr_fd.c		ft_putstr_fd.c
 
-SRC_COUNT	:=	ft_strlcat.c			ft_strlcpy.c		ft_strlen.c			\
-				ft_count_word.c			ft_count_char.c
+SRC_PROJ	:=	ft_gnl_join.c		ft_heredoc.c			ft_printf.c				\
+				get_next_line.c
 
-SRC_PROJ	:=	ft_printf.c				get_next_line.c		ft_heredoc.c		\
-				ft_gnl_join.c
+SRC_STR		:=	ft_int_strchr.c		ft_split.c				ft_strcat.c				\
+				ft_strchr.c			ft_strcpy.c				ft_strdup.c				\
+				ft_strfreejoin.c	ft_strjoin.c			ft_strncat.c			\
+				ft_strncmp.c		ft_strncpy.c			ft_strnjoin.c			\
+				ft_strnstr.c		ft_strrchr.c			ft_strstr.c				\
+				ft_strtrim.c		ft_substr.c				ft_unsplit.c
 
 #//////////////////////////////////////////////////////////////////////////////
 #		SRCS & OBJ PATHS
