@@ -94,3 +94,5 @@
 | `ft_calloc.c` | void	*ft_calloc(size_t count, size_t size); | Allocate count * size memory to a pointer and set all of it to 0 using bzero, then returns the pointer allocated |
 | `ft_free.c` | void	ft_free(char **str); | Free the parameter given and set it to NULL |
 | `ft_free_split.c` | void	ft_free_split(char **split); | Free each element of a split given as parameter and free the split itself |
+
+WiP
