@@ -6,7 +6,7 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:31:48 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/02/09 17:35:43 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/02/15 14:27:12 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,16 +50,36 @@
 #  define PRINTFCSET "scdiuxXp"
 # endif //PRINTFCSET
 
-enum	e_const
-{
-	STDIN = 0,
-	STDOUT = 1,
-	STDERR = 2,
-	TRUE = 1,
-	FALSE = 0,
-	NEGATIVE = -1,
-	POSITIVE = 1,
-	BUFFER_SIZE = 1,
-};
+# ifndef STDIN
+#  define STDIN 0
+# endif //STDIN
+
+# ifndef STDOUT
+#  define STDOUT 1
+# endif //STDOUT
+
+# ifndef STDERR
+#  define STDERR 2
+# endif //STDERR
+
+# ifndef TRUE
+#  define TRUE 1
+# endif //TRUE
+
+# ifndef FALSE
+#  define FALSE 0
+# endif //FALSE
+
+# ifndef NEGATIVE
+#  define NEGATIVE -1
+# endif //NEGATIVE
+
+# ifndef POSITIVE
+#  define POSITIVE 1
+# endif //POSITIVE
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif //BUFFERSIZE
 
 #endif //LIBFT_H
