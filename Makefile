@@ -6,7 +6,7 @@
 #    By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/10 09:59:23 by ljohnson          #+#    #+#              #
-#    Updated: 2022/02/10 13:17:13 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/02/20 11:05:56 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,8 @@ SRC_COUNT	:=	ft_count_char.c		ft_count_word.c			ft_strlcat.c			\
 
 SRC_LST		:=	ft_lstadd_back.c	ft_lstadd_front.c		ft_lstclear.c			\
 				ft_lstdelone.c		ft_lstiter.c			ft_lstlast.c			\
-				ft_lstmap.c			ft_lstnew.c				ft_lstsize.c
+				ft_lstmap.c			ft_lstnew.c				ft_lstsize.c			\
+				ft_lstfree.c
 
 SRC_MATHS	:=	ft_approx_sqrt.c	ft_factorial.c			ft_find_next_prime.c	\
 				ft_get_highest.c	ft_power.c				ft_sqrt.c				\

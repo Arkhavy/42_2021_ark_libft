@@ -6,7 +6,7 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:58:32 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/02/10 13:10:37 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/02/20 11:07:17 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,7 @@ void	ft_lstadd_back(t_list **lst, t_list *newlst);
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+void	ft_lstfree(t_list *lst);
 
 #endif //FT_LST_H
