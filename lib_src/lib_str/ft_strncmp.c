@@ -6,7 +6,7 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:39:50 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:08:16 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/02/24 08:33:17 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	unsigned char	*str2;
 
 	a = 0;
+	if (!s1 || !s2)
+		return (256);
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
 	while ((str1[a] || str2[a]) && (a < n))
