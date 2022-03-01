@@ -6,7 +6,7 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 08:31:20 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:07:12 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/03/01 15:54:12 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 void	ft_putnbr_base_fd(unsigned int nbr, char *base, int fd)
 {
-	int				count;
 	unsigned int	hexnb;
 	size_t			baselen;
 
-	count = 0;
 	hexnb = nbr;
 	baselen = ft_strlen(base);
 	if (hexnb >= baselen)

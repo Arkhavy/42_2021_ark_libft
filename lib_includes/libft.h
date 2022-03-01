@@ -6,7 +6,7 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:31:48 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/02/15 14:27:12 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/03/01 15:53:16 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,10 @@
 # ifndef PRINTFCSET
 #  define PRINTFCSET "scdiuxXp"
 # endif //PRINTFCSET
+
+# ifndef OPEN_MAX
+#  define OPEN_MAX 10
+# endif //OPEN_MAX
 
 # ifndef STDIN
 #  define STDIN 0
