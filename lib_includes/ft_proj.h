@@ -6,7 +6,7 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:59:02 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/02/10 13:47:48 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/03/04 13:48:43 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,7 @@ int		ft_printf(const char *format, ...);
 char	*ft_gnl_join(int fd);
 //int	ft_check_limiter(char *prompt, char *limiter);
 int		ft_heredoc(char *limiter);
+//int	ft_print_parse_fd(va_list ap, char fc, int fd);
+int		ft_dprintf(int fd, const char *format, ...);
 
 #endif //FT_PROJ_H

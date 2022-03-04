@@ -6,11 +6,23 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 12:57:05 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:07:04 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/03/04 13:22:19 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_int_putchar_fd(int c, int fd)
+{
+	write (fd, &c, 1);
+	return (1);
+}
+
+int	ft_int_putchar(int c)
+{
+	write(1, &c, 1);
+	return (1);
+}
 
 void	ft_putchar_fd(char c, int fd)
 {

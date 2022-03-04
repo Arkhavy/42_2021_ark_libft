@@ -6,7 +6,7 @@
 #    By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/10 09:59:23 by ljohnson          #+#    #+#              #
-#    Updated: 2022/02/20 11:05:56 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/03/04 14:00:46 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,13 +52,11 @@ SRC_MEM		:=	ft_bzero.c			ft_calloc.c				ft_free_split.c			\
 				ft_free.c			ft_memchr.c				ft_memcmp.c				\
 				ft_memcpy.c			ft_memmove.c			ft_memset.c
 
-SRC_PRINT	:=	ft_int_putchar.c	ft_int_putnbr_base.c	ft_int_putnbr.c			\
-				ft_int_putptr.c		ft_int_putstr.c			ft_putchar_fd.c			\
-				ft_putendl_fd.c		ft_putnbr_base_fd.c		ft_putnbr_fd.c			\
-				ft_putptr_fd.c		ft_putstr_fd.c
+SRC_PRINT	:=	ft_putchar_fd.c		ft_putendl_fd.c			ft_putnbr_base_fd.c		\
+				ft_putnbr_fd.c		ft_putptr_fd.c			ft_putstr_fd.c
 
 SRC_PROJ	:=	ft_gnl_join.c		ft_heredoc.c			ft_printf.c				\
-				get_next_line.c
+				get_next_line.c		ft_dprintf.c
 
 SRC_STR		:=	ft_int_strchr.c		ft_split.c				ft_strcat.c				\
 				ft_strchr.c			ft_strcpy.c				ft_strdup.c				\
