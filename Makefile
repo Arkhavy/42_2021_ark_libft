@@ -6,7 +6,7 @@
 #    By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/10 09:59:23 by ljohnson          #+#    #+#              #
-#    Updated: 2022/04/10 09:21:16 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/04/10 09:32:09 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -108,7 +108,7 @@ SRCS	:=	$(addprefix $(P_SRCS)$(P_BOOLEANS),$(LST_BOOLEANS))			\
 			$(addprefix $(P_SRCS)$(P_MEMORY),$(LST_MEMORY))				\
 			$(addprefix $(P_SRCS)$(P_PRINTS),$(LST_PRINTS))				\
 			$(addprefix $(P_SRCS)$(P_PROJECTS),$(LST_PROJECTS))			\
-			$(addprefix $(P_SRCS)$(P_STRINGS),$(LST_STRING))
+			$(addprefix $(P_SRCS)$(P_STRINGS),$(LST_STRINGS))
 
 OBJS	:=	$(subst $(P_SRCS),$(P_OBJS),$(SRCS:.c=.o))
 
