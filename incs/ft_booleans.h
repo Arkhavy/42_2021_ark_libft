@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bool.h                                          :+:      :+:    :+:   */
+/*   ft_booleans.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:40:47 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/04/10 08:44:59 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 09:00:29 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_BOOL_H
-# define FT_BOOL_H
+#ifndef FT_BOOLEANS_H
+# define FT_BOOLEANS_H
 
 # include <libft.h>
 
@@ -32,4 +32,4 @@ int		ft_islower(int c);
 int		ft_isspace(int c);
 int		ft_isprime(int nb);
 
-#endif //FT_BOOL_H
+#endif //FT_BOOLEANS_H

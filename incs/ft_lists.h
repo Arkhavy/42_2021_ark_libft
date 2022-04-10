@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst.h                                           :+:      :+:    :+:   */
+/*   ft_lists.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:58:32 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/04/10 08:45:00 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 09:00:47 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LST_H
-# define FT_LST_H
+#ifndef FT_LISTS_H
+# define FT_LISTS_H
 
 # include <libft.h>
 
@@ -37,4 +37,4 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 void	ft_lstfree(t_list *lst);
 
-#endif //FT_LST_H
+#endif //FT_LISTS_H

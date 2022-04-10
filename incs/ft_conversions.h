@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mem.h                                           :+:      :+:    :+:   */
+/*   ft_conversions.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 17:43:51 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/04/10 08:45:01 by ljohnson         ###   ########lyon.fr   */
+/*   Created: 2022/01/31 17:57:19 by ljohnson          #+#    #+#             */
+/*   Updated: 2022/04/10 09:00:36 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_MEM_H
-# define FT_MEM_H
+#ifndef FT_CONVERSIONS_H
+# define FT_CONVERSIONS_H
 
 # include <libft.h>
 
 /*/////////////////////////////////////////////////////////////////////////////
-		MEMORY MANAGEMENT FUNCTIONS
+		CONVERSION FUNCTIONS
 *//////////////////////////////////////////////////////////////////////////////
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n);
-void	*ft_memchr(const void *s, int c, size_t n);
-void	*ft_memcpy(void *dst, void *src, size_t n);
-void	*ft_memmove(void *dst, const void *src, size_t n);
-void	*ft_memset(void *b, int c, size_t len);
-void	ft_bzero(void *s, size_t n);
-void	*ft_calloc(size_t count, size_t size);
+int		ft_atoi(const char *str);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+char	*ft_itoa(int n);
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
-void	ft_free(char **str);
-void	ft_free_split(char **split);
+long	ft_atol(const char *str);
+int		ft_big_atoi(const char *str);
+long	ft_big_atol(const char *str);
+void	ft_swap(int *a, int *b);
+char	*ft_str_toupper(const char *str);
+char	*ft_str_tolower(const char *str);
 
-#endif //FT_MEM_H
+#endif //FT_CONVERSIONS_H

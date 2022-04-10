@@ -6,7 +6,7 @@
 #    By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/10 09:59:23 by ljohnson          #+#    #+#              #
-#    Updated: 2022/04/10 08:48:56 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/04/10 08:58:42 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,49 +20,63 @@ NAME		:=	libft.a
 #//////////////////////////////////////////////////////////////////////////////
 
 # Files
-LST_INCS			:=	libft.h				ft_bool.h				ft_conv.h				\
-						ft_count.h			ft_lst.h				ft_maths.h				\
-						ft_mem.h			ft_print.h				ft_proj.h				\
-						ft_str.h
+LST_INCS			:=	libft.h					ft_booleans.h		\
+						ft_conversions.h		ft_counters.h		\
+						ft_lists.h				ft_maths.h			\
+						ft_memory.h				ft_prints.h			\
+						ft_projects.h			ft_strings.h
 
-LST_BOOLEANS		:=	ft_isalnum.c		ft_isalpha.c			ft_isascii.c			\
-						ft_ischarset.c		ft_isdigit.c			ft_islower.c			\
-						ft_isnotcharset.c	ft_isprime.c			ft_isprint.c			\
-						ft_isspace.c		ft_isupper.c
+LST_BOOLEANS		:=	ft_isalnum.c			ft_isalpha.c		\
+						ft_isascii.c			ft_ischarset.c		\
+						ft_isdigit.c			ft_islower.c		\
+						ft_isnotcharset.c		ft_isprime.c		\
+						ft_isprint.c			ft_isspace.c		\
+						ft_isupper.c
 
-LST_CONVERSIONS		:=	ft_atoi.c			ft_atol.c				ft_big_atoi.c			\
-						ft_big_atol.c		ft_itoa.c				ft_str_tolower.c		\
-						ft_str_toupper.c	ft_striteri.c			ft_strmapi.c			\
-						ft_swap.c			ft_tolower.c			ft_toupper.c
+LST_CONVERSIONS		:=	ft_atoi.c				ft_atol.c			\
+						ft_big_atoi.c			ft_big_atol.c		\
+						ft_itoa.c				ft_str_tolower.c	\
+						ft_str_toupper.c		ft_striteri.c		\
+						ft_strmapi.c			ft_swap.c			\
+						ft_tolower.c			ft_toupper.c
 
-LST_COUNTERS		:=	ft_count_char.c		ft_count_word.c			ft_strlcat.c			\
-						ft_strlcpy.c		ft_strlen.c
+LST_COUNTERS		:=	ft_count_char.c			ft_count_word.c		\
+						ft_strlcat.c			ft_strlcpy.c		\
+						ft_strlen.c
 
-LST_LISTS			:=	ft_lstadd_back.c	ft_lstadd_front.c		ft_lstclear.c			\
-						ft_lstdelone.c		ft_lstiter.c			ft_lstlast.c			\
-						ft_lstmap.c			ft_lstnew.c				ft_lstsize.c			\
-						ft_lstfree.c
+LST_LISTS			:=	ft_lstadd_back.c		ft_lstadd_front.c	\
+						ft_lstclear.c			ft_lstdelone.c		\
+						ft_lstiter.c			ft_lstlast.c		\
+						ft_lstmap.c				ft_lstnew.c			\
+						ft_lstsize.c			ft_lstfree.c
 
-LST_MATHS			:=	ft_approx_sqrt.c	ft_factorial.c			ft_find_next_prime.c	\
-						ft_get_highest.c	ft_power.c				ft_sqrt.c				\
+LST_MATHS			:=	ft_approx_sqrt.c		ft_factorial.c		\
+						ft_find_next_prime.c	ft_get_highest.c	\
+						ft_power.c				ft_sqrt.c			\
 						ft_get_lowest.c
 
-LST_MEMORY			:=	ft_bzero.c			ft_calloc.c				ft_free_split.c			\
-						ft_free.c			ft_memchr.c				ft_memcmp.c				\
-						ft_memcpy.c			ft_memmove.c			ft_memset.c
+LST_MEMORY			:=	ft_bzero.c				ft_calloc.c			\
+						ft_free_split.c			ft_free.c			\
+						ft_memchr.c				ft_memcmp.c			\
+						ft_memcpy.c				ft_memmove.c		\
+						ft_memset.c
 
-LST_PRINTS			:=	ft_putchar_fd.c		ft_putendl_fd.c			ft_putnbr_base_fd.c		\
-						ft_putnbr_fd.c		ft_putptr_fd.c			ft_putstr_fd.c
+LST_PRINTS			:=	ft_putchar_fd.c			ft_putendl_fd.c		\
+						ft_putnbr_base_fd.c		ft_putnbr_fd.c		\
+						ft_putptr_fd.c			ft_putstr_fd.c
 
-LST_PROJECTS		:=	ft_gnl_join.c		ft_heredoc.c			ft_printf.c				\
-						get_next_line.c		ft_dprintf.c
+LST_PROJECTS		:=	ft_gnl_join.c			ft_printf.c			\
+						get_next_line.c			ft_dprintf.c
 
-LST_STRINGS			:=	ft_int_strchr.c		ft_split.c				ft_strcat.c				\
-						ft_strchr.c			ft_strcpy.c				ft_strdup.c				\
-						ft_strfreejoin.c	ft_strjoin.c			ft_strncat.c			\
-						ft_strncmp.c		ft_strncpy.c			ft_strnjoin.c			\
-						ft_strnstr.c		ft_strrchr.c			ft_strstr.c				\
-						ft_strtrim.c		ft_substr.c				ft_unsplit.c
+LST_STRINGS			:=	ft_int_strchr.c		ft_split.c				\
+						ft_strcat.c			ft_strchr.c				\
+						ft_strcpy.c			ft_strdup.c				\
+						ft_strfreejoin.c	ft_strjoin.c			\
+						ft_strncat.c		ft_strncmp.c			\
+						ft_strncpy.c		ft_strnjoin.c			\
+						ft_strnstr.c		ft_strrchr.c			\
+						ft_strstr.c			ft_strtrim.c			\
+						ft_substr.c			ft_unsplit.c
 
 # Directories
 P_INCS			:=	incs/

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str.h                                           :+:      :+:    :+:   */
+/*   ft_strings.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:48:12 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/04/10 08:45:02 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 09:01:10 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STR_H
-# define FT_STR_H
+#ifndef FT_STRINGS_H
+# define FT_STRINGS_H
 
 # include <libft.h>
 
@@ -39,4 +39,4 @@ char	*ft_strcat(char *dst, const char *src);
 char	*ft_strncat(char *dst, const char *src, size_t len);
 char	*ft_strfreejoin(const char *s1, const char *s2);
 
-#endif //FT_STR_H
+#endif //FT_STRINGS_H

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print.h                                         :+:      :+:    :+:   */
+/*   ft_prints.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:57:59 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/04/10 08:45:01 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 09:00:57 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINT_H
-# define FT_PRINT_H
+#ifndef FT_PRINTS_H
+# define FT_PRINTS_H
 
 # include <libft.h>
 
@@ -60,4 +60,4 @@ void	ft_putstr_fd(char *s, int fd);
 int		ft_int_putstr(char *s);
 int		ft_int_putstr_fd(char *s, int fd);
 
-#endif //FT_PRINT_H
+#endif //FT_PRINTS_H
