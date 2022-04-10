@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putptr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_int_putnbr_base_fd.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/21 08:33:19 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/04/10 09:12:31 by ljohnson         ###   ########lyon.fr   */
+/*   Created: 2022/04/10 09:14:08 by ljohnson          #+#    #+#             */
+/*   Updated: 2022/04/10 09:14:19 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-static void	ft_putptr_base_fd(unsigned long long nbr, char *base, int fd)
+int	ft_int_putnbr_base_fd(unsigned int nbr, char *base, int fd)
 {
-	unsigned long long	hexptr;
-	size_t				baselen;
+	int				count;
+	unsigned int	hexnb;
+	size_t			baselen;
 
-	hexptr = nbr;
+	count = 0;
+	hexnb = nbr;
 	baselen = ft_strlen(base);
-	if (hexptr >= baselen)
-		ft_putptr_base_fd(hexptr / baselen, base, fd);
-	ft_putchar_fd(base[hexptr % baselen], fd);
-}
-
-void	ft_putptr_fd(unsigned long long nbr, int fd)
-{
-	ft_putstr_fd("0x", fd);
-	ft_putptr_base_fd(*(unsigned long long *)&nbr, LOWERHEX, fd);
+	if (hexnb >= baselen)
+		count += ft_int_putnbr_base_fd(hexnb / baselen, base, fd);
+	count += ft_int_putchar(base[hexnb % baselen]);
+	return (count);
 }

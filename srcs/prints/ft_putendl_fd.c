@@ -6,26 +6,11 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 13:01:20 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/04/10 08:44:34 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 09:12:20 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-
-int	ft_int_putptr_base_fd(unsigned long long nbr, char *base, int fd)
-{
-	int					count;
-	unsigned long long	hexptr;
-	size_t				baselen;
-
-	count = 0;
-	hexptr = nbr;
-	baselen = ft_strlen(base);
-	if (hexptr >= baselen)
-		count += ft_int_putptr_base_fd(hexptr / baselen, base, fd);
-	count += ft_int_putchar_fd(base[hexptr % baselen], fd);
-	return (count);
-}
 
 void	ft_putendl_fd(char *s, int fd)
 {
