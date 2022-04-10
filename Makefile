@@ -6,103 +6,107 @@
 #    By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/10 09:59:23 by ljohnson          #+#    #+#              #
-#    Updated: 2022/03/04 14:00:46 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/04/10 08:41:08 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 .PHONY: all clean fclean re norm
 .SILENT:
 
-NAME		:= libft.a
-MAIN		:=
-BINARY		:=
+NAME		:=	libft.a
 
 #//////////////////////////////////////////////////////////////////////////////
 #		ALL FILES
 #//////////////////////////////////////////////////////////////////////////////
 
-HEADERS		:=	libft.h				ft_bool.h				ft_conv.h				\
-				ft_count.h			ft_lst.h				ft_maths.h				\
-				ft_mem.h			ft_print.h				ft_proj.h				\
-				ft_str.h
+# Files
+LST_INCS			:=	libft.h				ft_bool.h				ft_conv.h				\
+						ft_count.h			ft_lst.h				ft_maths.h				\
+						ft_mem.h			ft_print.h				ft_proj.h				\
+						ft_str.h
 
-SRC_BOOL	:=	ft_isalnum.c		ft_isalpha.c			ft_isascii.c			\
-				ft_ischarset.c		ft_isdigit.c			ft_islower.c			\
-				ft_isnotcharset.c	ft_isprime.c			ft_isprint.c			\
-				ft_isspace.c		ft_isupper.c
+LST_BOOLEANS		:=	ft_isalnum.c		ft_isalpha.c			ft_isascii.c			\
+						ft_ischarset.c		ft_isdigit.c			ft_islower.c			\
+						ft_isnotcharset.c	ft_isprime.c			ft_isprint.c			\
+						ft_isspace.c		ft_isupper.c
 
-SRC_CONV	:=	ft_atoi.c			ft_atol.c				ft_big_atoi.c			\
-				ft_big_atol.c		ft_itoa.c				ft_str_tolower.c		\
-				ft_str_toupper.c	ft_striteri.c			ft_strmapi.c			\
-				ft_swap.c			ft_tolower.c			ft_toupper.c
+LST_CONVERSIONS		:=	ft_atoi.c			ft_atol.c				ft_big_atoi.c			\
+						ft_big_atol.c		ft_itoa.c				ft_str_tolower.c		\
+						ft_str_toupper.c	ft_striteri.c			ft_strmapi.c			\
+						ft_swap.c			ft_tolower.c			ft_toupper.c
 
-SRC_COUNT	:=	ft_count_char.c		ft_count_word.c			ft_strlcat.c			\
-				ft_strlcpy.c		ft_strlen.c
+LST_COUNTERS		:=	ft_count_char.c		ft_count_word.c			ft_strlcat.c			\
+						ft_strlcpy.c		ft_strlen.c
 
-SRC_LST		:=	ft_lstadd_back.c	ft_lstadd_front.c		ft_lstclear.c			\
-				ft_lstdelone.c		ft_lstiter.c			ft_lstlast.c			\
-				ft_lstmap.c			ft_lstnew.c				ft_lstsize.c			\
-				ft_lstfree.c
+LST_LISTS			:=	ft_lstadd_back.c	ft_lstadd_front.c		ft_lstclear.c			\
+						ft_lstdelone.c		ft_lstiter.c			ft_lstlast.c			\
+						ft_lstmap.c			ft_lstnew.c				ft_lstsize.c			\
+						ft_lstfree.c
 
-SRC_MATHS	:=	ft_approx_sqrt.c	ft_factorial.c			ft_find_next_prime.c	\
-				ft_get_highest.c	ft_power.c				ft_sqrt.c				\
-				ft_get_lowest.c
+LST_MATHS			:=	ft_approx_sqrt.c	ft_factorial.c			ft_find_next_prime.c	\
+						ft_get_highest.c	ft_power.c				ft_sqrt.c				\
+						ft_get_lowest.c
 
-SRC_MEM		:=	ft_bzero.c			ft_calloc.c				ft_free_split.c			\
-				ft_free.c			ft_memchr.c				ft_memcmp.c				\
-				ft_memcpy.c			ft_memmove.c			ft_memset.c
+LST_MEMORY			:=	ft_bzero.c			ft_calloc.c				ft_free_split.c			\
+						ft_free.c			ft_memchr.c				ft_memcmp.c				\
+						ft_memcpy.c			ft_memmove.c			ft_memset.c
 
-SRC_PRINT	:=	ft_putchar_fd.c		ft_putendl_fd.c			ft_putnbr_base_fd.c		\
-				ft_putnbr_fd.c		ft_putptr_fd.c			ft_putstr_fd.c
+LST_PRINTS			:=	ft_putchar_fd.c		ft_putendl_fd.c			ft_putnbr_base_fd.c		\
+						ft_putnbr_fd.c		ft_putptr_fd.c			ft_putstr_fd.c
 
-SRC_PROJ	:=	ft_gnl_join.c		ft_heredoc.c			ft_printf.c				\
-				get_next_line.c		ft_dprintf.c
+LST_PROJECTS		:=	ft_gnl_join.c		ft_heredoc.c			ft_printf.c				\
+						get_next_line.c		ft_dprintf.c
 
-SRC_STR		:=	ft_int_strchr.c		ft_split.c				ft_strcat.c				\
-				ft_strchr.c			ft_strcpy.c				ft_strdup.c				\
-				ft_strfreejoin.c	ft_strjoin.c			ft_strncat.c			\
-				ft_strncmp.c		ft_strncpy.c			ft_strnjoin.c			\
-				ft_strnstr.c		ft_strrchr.c			ft_strstr.c				\
-				ft_strtrim.c		ft_substr.c				ft_unsplit.c
+LST_STRINGS			:=	ft_int_strchr.c		ft_split.c				ft_strcat.c				\
+						ft_strchr.c			ft_strcpy.c				ft_strdup.c				\
+						ft_strfreejoin.c	ft_strjoin.c			ft_strncat.c			\
+						ft_strncmp.c		ft_strncpy.c			ft_strnjoin.c			\
+						ft_strnstr.c		ft_strrchr.c			ft_strstr.c				\
+						ft_strtrim.c		ft_substr.c				ft_unsplit.c
+
+# Directories
+P_INCS			:=	incs/
+P_SRCS			:=	srcs/
+P_BOOLEANS		:=	booleans/
+P_CONVERSIONS	:=	conversions/
+P_COUNTERS		:=	counters/
+P_LISTS			:=	lists/
+P_MATHS			:=	maths/
+P_MEMORY		:=	memory/
+P_PRINTS		:=	prints/
+P_PROJECTS		:=	projects/
+P_STRINGS		:=	strings/
+P_OBJS			:=	.objs/
+
+# Shortcuts
+INCS	:=	$(addprefix $(P_INCS),$(LST_INCS))
+
+SRCS	:=	$(addprefix $(P_SRCS)$(P_BOOLEANS),$(LST_BOOLEANS))			\
+			$(addprefix $(P_SRCS)$(P_CONVERSIONS),$(LST_CONVERSIONS))	\
+			$(addprefix $(P_SRCS)$(P_COUNTERS),$(LST_COUNTERS))			\
+			$(addprefix $(P_SRCS)$(P_LISTS),$(LST_LISTS))				\
+			$(addprefix $(P_SRCS)$(P_MATHS),$(LST_MATHS))				\
+			$(addprefix $(P_SRCS)$(P_MEMORY),$(LST_MEMORY))				\
+			$(addprefix $(P_SRCS)$(P_PRINTS),$(LST_PRINTS))				\
+			$(addprefix $(P_SRCS)$(P_PROJECTS),$(LST_PROJECTS))			\
+			$(addprefix $(P_SRCS)$(P_STRINGS),$(LST_STRING))
+
+OBJS	:=	$(subst $(P_SRCS),$(P_OBJS),$(SRCS:.c=.o))
 
 #//////////////////////////////////////////////////////////////////////////////
-#		SRCS & OBJ PATHS
+#		FLAGS & TEXT MODIFIERS
 #//////////////////////////////////////////////////////////////////////////////
 
-SRCP		:=	lib_src/
-OBJP		:=	.lib_obj/
-INCP		:=	lib_includes/
-
-SRCS		:=	$(addprefix $(SRCP)lib_bool/,$(SRC_BOOL))	\
-				$(addprefix $(SRCP)lib_lst/,$(SRC_LST))		\
-				$(addprefix $(SRCP)lib_mem/,$(SRC_MEM))		\
-				$(addprefix $(SRCP)lib_print/,$(SRC_PRINT))	\
-				$(addprefix	$(SRCP)lib_proj/,$(SRC_PROJ))	\
-				$(addprefix $(SRCP)lib_str/,$(SRC_STR))		\
-				$(addprefix $(SRCP)lib_maths/,$(SRC_MATHS))	\
-				$(addprefix $(SRCP)lib_conv/,$(SRC_CONV))	\
-				$(addprefix $(SRCP)lib_count/,$(SRC_COUNT))
-
-INCS		:=	$(addprefix $(INCP),$(HEADERS))
-OBJS		:=	$(subst $(SRCP),$(OBJP),$(SRCS:.c=.o))
-
-#//////////////////////////////////////////////////////////////////////////////
-#		COMMAND SHORTCUTS
-#//////////////////////////////////////////////////////////////////////////////
-
+# Flags
 CC			:=	gcc
 CF			:=	-Wall -Werror -Wextra
 CS			:=	-g -fsanitize=address
+CI			:=	-I $(P_INCS)
 CG			:=	-g3
-NC			:=	norminette
 AR			:=	ar rcs
 RM			:=	rm -rf
 
-#//////////////////////////////////////////////////////////////////////////////
-#		COLORS
-#//////////////////////////////////////////////////////////////////////////////
-
-# colors
+# Colors
 BLACK=\033[30m
 RED=\033[31m
 GREEN=\033[32m
@@ -112,9 +116,9 @@ PURPLE=\033[35m
 CYAN=\033[36m
 WHITE=\033[37m
 
-# text
+# Text
 ERASE=\033[2K\r
-RST=\033[0m
+RESET=\033[0m
 BOLD=\033[1m
 FAINT=\033[2m
 ITALIC=\033[3m
@@ -127,44 +131,31 @@ UNDERLINE=\033[4m
 all: $(NAME)
 
 # Binary creation
-
 $(NAME): $(OBJS) Makefile
 	$(AR) $(NAME) $(OBJS)
-	printf "\n$(GREEN)$(BOLD)Library $(NAME) created$(RST)	✅\n"
+	printf "\n$(GREEN)$(BOLD)Library $(NAME) created$(RESET)	✅\n"
 
-$(OBJS): $(OBJP)
+$(P_OBJS)%.o: $(P_SRCS)%.c $(INCS) Makefile | $(P_OBJS)
+	$(CC) $(CF) $(CI) -c $< -o $@
+	printf "$(ERASE)$(FAINT)$(CC) $(CF) $(CI) -c -o $(RESET)$(CYAN)$(BOLD)$@$(RESET) $(FAINT)$(BLUE)$<$(RESET)"
 
-$(OBJP):
-	mkdir -p	$(OBJP)				$(OBJP)/lib_bool/	$(OBJP)/lib_lst/	\
-				$(OBJP)/lib_mem/	$(OBJP)/lib_print/	$(OBJP)/lib_proj/	\
-				$(OBJP)/lib_str/	$(OBJP)/lib_conv/	$(OBJP)/lib_maths/	\
-				$(OBJP)/lib_count/
-	printf "$(GREEN)$(BOLD)obj directories created$(RST)	✅\n"
+$(P_OBJS):
+	mkdir -p	$(P_OBJS)					$(P_OBJS)$(P_BOOLEANS)	\
+				$(P_OBJS)$(P_CONVERSIONS)	$(P_OBJS)$(P_COUNTERS)	\
+				$(P_OBJS)$(P_LISTS)			$(P_OBJS)$(P_MATHS)		\
+				$(P_OBJS)$(P_MEMORY)		$(P_OBJS)$(P_PRINTS)	\
+				$(P_OBJS)$(P_PROJECTS)		$(P_OBJS)$(P_STRINGS)
+	printf "$(GREEN)$(BOLD)obj directories created$(RESET)	✅\n"
 
-$(OBJP)%.o: $(SRCP)%.c $(INCS) Makefile
-	printf "$(ERASE)$(FAINT)$(CC) $(CF) -I $(INCP) -c -o $(RST)$(CYAN)$(BOLD)$@$(RST) $(FAINT)$(BLUE)$<$(RST)"
-	$(CC) $(CF) -I $(INCP) -c $< -o $@
-
-# Additional rules
-
-norm:
-	printf "\n$(BOLD)$(CYAN)$(NC) $(SRCP) $(INCP)$(RST)\n"
-	$(NC) $(SRCS)
-	$(NC) $(INCS)
-
-comp: $(SRCS) $(MAIN)
-	$(CC) $(CF) $(CS) $^ -o $(BINARY)CS
-	$(CC) $(CF) $(CG) $^ -o $(BINARY)CG
-	
 # Mandatory rules
 
 clean:
 	$(RM) $(OBJS)
-	printf "$(YELLOW)$(BOLD)All object files removed$(RST)\n"
+	printf "$(YELLOW)$(BOLD)All libft object files removed$(RESET)\n"
 
 fclean: clean
-	$(RM) $(NAME) $(OBJP)
-	printf "$(YELLOW)$(BOLD)All object folders removed$(RST)\n"
-	printf "$(RED)$(BOLD)Library $(NAME) removed $(RST)\n"
+	$(RM) $(NAME) $(P_OBJS)
+	printf "$(YELLOW)$(BOLD)All libft object folders removed$(RESET)\n"
+	printf "$(RED)$(BOLD)Library $(NAME) removed $(RESET)\n"
 
 re: fclean all
