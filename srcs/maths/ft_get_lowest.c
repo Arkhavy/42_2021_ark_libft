@@ -6,11 +6,11 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 13:15:42 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/02/10 13:16:10 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:45:17 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 int	ft_get_lowest(int nb1, int nb2)
 {

@@ -6,11 +6,11 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 09:36:04 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/02/10 13:15:07 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:45:17 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 int	ft_get_highest(int nb1, int nb2)
 {

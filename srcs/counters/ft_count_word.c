@@ -6,11 +6,11 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 13:35:01 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/02/09 09:51:16 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:45:08 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 size_t	ft_count_word(const char *str, const char c)
 {

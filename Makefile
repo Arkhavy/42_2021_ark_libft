@@ -6,7 +6,7 @@
 #    By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/10 09:59:23 by ljohnson          #+#    #+#              #
-#    Updated: 2022/04/10 08:41:08 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/04/10 08:48:56 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -145,17 +145,19 @@ $(P_OBJS):
 				$(P_OBJS)$(P_LISTS)			$(P_OBJS)$(P_MATHS)		\
 				$(P_OBJS)$(P_MEMORY)		$(P_OBJS)$(P_PRINTS)	\
 				$(P_OBJS)$(P_PROJECTS)		$(P_OBJS)$(P_STRINGS)
-	printf "$(GREEN)$(BOLD)obj directories created$(RESET)	✅\n"
+	printf "$(GREEN)$(BOLD)LIBFT obj directories created$(RESET)	✅\n"
 
 # Mandatory rules
 
 clean:
-	$(RM) $(OBJS)
-	printf "$(YELLOW)$(BOLD)All libft object files removed$(RESET)\n"
+	$(RM) $(OBJS) $(P_OBJS)
+	printf "$(YELLOW)$(BOLD)All LIBFT object files removed$(RESET)\n"
 
 fclean: clean
-	$(RM) $(NAME) $(P_OBJS)
-	printf "$(YELLOW)$(BOLD)All libft object folders removed$(RESET)\n"
+	$(RM) $(NAME)
+	printf "$(YELLOW)$(BOLD)All LIBFT object folders removed$(RESET)\n"
 	printf "$(RED)$(BOLD)Library $(NAME) removed $(RESET)\n"
 
-re: fclean all
+re:
+	$(MAKE) fclean
+	$(MAKE) all

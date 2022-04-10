@@ -6,11 +6,11 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:58:20 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:02:37 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:45:03 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 int	ft_isdigit(int c)
 {

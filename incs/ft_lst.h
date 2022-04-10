@@ -6,14 +6,14 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:58:32 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/02/20 11:07:17 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:45:00 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LST_H
 # define FT_LST_H
 
-# include "libft.h"
+# include <libft.h>
 
 /*/////////////////////////////////////////////////////////////////////////////
 		LINKED LISTS FUNCTIONS AND STRUCT

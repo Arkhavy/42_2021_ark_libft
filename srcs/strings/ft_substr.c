@@ -6,11 +6,11 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 18:50:20 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/02/06 10:10:02 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:44:43 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {

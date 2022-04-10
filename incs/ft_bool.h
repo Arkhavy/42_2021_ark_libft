@@ -6,14 +6,14 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:40:47 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:00:55 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:44:59 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_BOOL_H
 # define FT_BOOL_H
 
-# include "libft.h"
+# include <libft.h>
 
 /*/////////////////////////////////////////////////////////////////////////////
 		BOOLEAN FUNCTIONS

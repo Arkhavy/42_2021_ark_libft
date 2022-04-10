@@ -6,11 +6,11 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 15:59:00 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:07:52 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:44:38 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 char	*ft_strcat(char *dst, const char *src)
 {

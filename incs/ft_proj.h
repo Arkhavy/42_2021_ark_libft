@@ -6,14 +6,14 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:59:02 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/03/04 13:48:43 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:45:01 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PROJ_H
 # define FT_PROJ_H
 
-# include "libft.h"
+# include <libft.h>
 
 /*/////////////////////////////////////////////////////////////////////////////
 		PROJECTS FUNCTIONS

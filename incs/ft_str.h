@@ -6,14 +6,14 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:48:12 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/02/10 13:48:21 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:45:02 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_STR_H
 # define FT_STR_H
 
-# include "libft.h"
+# include <libft.h>
 
 /*/////////////////////////////////////////////////////////////////////////////
 		STR FUNCTIONS

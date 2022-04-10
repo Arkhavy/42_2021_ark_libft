@@ -6,11 +6,11 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 16:49:50 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/02/09 16:49:59 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:44:38 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 char	**ft_split(const char *s, char c)
 {

@@ -6,11 +6,11 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:22:06 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/02/06 09:57:11 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:45:09 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

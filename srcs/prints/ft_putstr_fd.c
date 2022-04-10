@@ -6,11 +6,11 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 12:59:13 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/03/04 13:40:30 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:44:36 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 int	ft_int_putstr_fd(char *s, int fd)
 {

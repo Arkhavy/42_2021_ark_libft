@@ -6,13 +6,14 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:31:48 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/03/01 15:53:16 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:46:16 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+//Global
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
@@ -24,15 +25,17 @@
 # include <math.h>
 # include <sys/time.h>
 # include <pthread.h>
-# include "ft_bool.h"
-# include "ft_conv.h"
-# include "ft_count.h"
-# include "ft_lst.h"
-# include "ft_maths.h"
-# include "ft_mem.h"
-# include "ft_print.h"
-# include "ft_proj.h"
-# include "ft_str.h"
+
+//Libft
+# include <ft_bool.h>
+# include <ft_conv.h>
+# include <ft_count.h>
+# include <ft_lst.h>
+# include <ft_maths.h>
+# include <ft_mem.h>
+# include <ft_print.h>
+# include <ft_proj.h>
+# include <ft_str.h>
 
 # ifndef UPPERHEX
 #  define UPPERHEX "0123456789ABCDEF"

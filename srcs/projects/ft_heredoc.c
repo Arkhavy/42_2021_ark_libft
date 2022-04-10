@@ -6,11 +6,11 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 09:18:57 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:07:32 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:44:37 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 static int	ft_check_limiter(char *prompt, char *limiter)
 {

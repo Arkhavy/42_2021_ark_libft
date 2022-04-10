@@ -6,11 +6,11 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 17:31:42 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:07:38 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:44:37 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 static char	*gnl_build_stock(char *stock, char *buffer, ssize_t index)
 {

@@ -6,14 +6,14 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:49:16 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/02/09 09:50:59 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:45:00 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_COUNT_H
 # define FT_COUNT_H
 
-# include "libft.h"
+# include <libft.h>
 
 /*/////////////////////////////////////////////////////////////////////////////
 		COUNT FUNCTIONS

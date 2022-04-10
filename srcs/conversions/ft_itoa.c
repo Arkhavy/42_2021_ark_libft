@@ -6,11 +6,11 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 15:54:23 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:03:18 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:45:06 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 char	*ft_itoa(int n)
 {

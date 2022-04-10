@@ -6,11 +6,11 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 08:13:28 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:08:10 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:44:40 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {

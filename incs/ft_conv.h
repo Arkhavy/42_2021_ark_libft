@@ -6,14 +6,14 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:57:19 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:00:39 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:45:00 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_CONV_H
 # define FT_CONV_H
 
-# include "libft.h"
+# include <libft.h>
 
 /*/////////////////////////////////////////////////////////////////////////////
 		CONVERSION FUNCTIONS

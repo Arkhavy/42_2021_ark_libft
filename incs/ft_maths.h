@@ -6,14 +6,14 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:51:35 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/02/10 13:16:43 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:45:01 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_MATHS_H
 # define FT_MATHS_H
 
-# include "libft.h"
+# include <libft.h>
 
 /*/////////////////////////////////////////////////////////////////////////////
 		MATHS FUNCTIONS

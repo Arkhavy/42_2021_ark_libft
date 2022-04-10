@@ -6,11 +6,11 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 14:19:00 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/02/10 14:28:09 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:44:43 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 char	*ft_strtrim(const char *s1, const char *set)
 {

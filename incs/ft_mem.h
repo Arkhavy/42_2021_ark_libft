@@ -6,14 +6,14 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:43:51 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:01:10 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:45:01 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_MEM_H
 # define FT_MEM_H
 
-# include "libft.h"
+# include <libft.h>
 
 /*/////////////////////////////////////////////////////////////////////////////
 		MEMORY MANAGEMENT FUNCTIONS

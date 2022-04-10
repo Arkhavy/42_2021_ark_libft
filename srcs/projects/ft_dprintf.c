@@ -6,11 +6,11 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 13:15:20 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/03/04 13:48:32 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:42:49 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../lib_includes/libft.h"
+#include <libft.h>
 
 static int	ft_print_parse_fd(va_list ap, char fc, int fd)
 {

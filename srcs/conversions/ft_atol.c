@@ -6,11 +6,11 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 14:52:09 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/02/09 08:32:05 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:45:05 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 long	ft_atol(const char *str)
 {

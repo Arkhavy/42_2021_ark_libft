@@ -6,11 +6,11 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:15:01 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:08:02 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:44:39 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 char	*ft_strdup(const char *s1)
 {

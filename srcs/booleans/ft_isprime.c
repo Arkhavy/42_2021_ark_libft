@@ -6,11 +6,11 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 13:00:40 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/01/31 18:02:48 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/10 08:45:04 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 int	ft_isprime(int nb)
 {
