@@ -6,7 +6,7 @@
 /*   By: ljohnson <ljohnson@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 15:54:23 by ljohnson          #+#    #+#             */
-/*   Updated: 2022/04/10 08:45:06 by ljohnson         ###   ########lyon.fr   */
+/*   Updated: 2022/04/12 09:00:34 by ljohnson         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_itoa(int n)
 
 	nb = n;
 	a = ft_count_char(nb);
-	str = malloc(sizeof(char) * a + 1);
+	str = malloc(sizeof(char) * (a + 1));
 	if (!str)
 		return (NULL);
 	str[a] = '\0';
